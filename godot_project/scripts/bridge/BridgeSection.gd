@@ -2,7 +2,7 @@
 extends Node3D
 
 # ── Configuration ──────────────────────────────────────────
-@export var deck_length: float = 106.0
+@export var deck_length: float = 106.6
 @export var deck_width: float = 14.0
 @export var truss_depth: float = 10.0
 @export var truss_segments: int = 7
