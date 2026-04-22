@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvxt2h8mty2xg"]
+
+[ext_resource type="Script" path="res://scripts/bridge/SectionAppraoch.gd" id="1_nmmyg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2tndj"]
+albedo_color = Color(0.4, 0.42, 0.38, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0af4t"]
+albedo_color = Color(0.47, 0.53, 0.45, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdu0e"]
+albedo_color = Color(0.47, 0.53, 0.45, 1)
+
+[node name="SectionAppraoch" type="Node3D"]
+script = ExtResource("1_nmmyg")
+
+[node name="Geometry" type="CSGCombiner3D" parent="."]
+
+[node name="Deck" type="CSGBox3D" parent="Geometry"]
+size = Vector3(335, 3, 14)
+material = SubResource("StandardMaterial3D_2tndj")
+
+[node name="GirderLeft" type="CSGBox3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -7)
+size = Vector3(335, 4, 0.5)
+material = SubResource("StandardMaterial3D_0af4t")
+
+[node name="GirderRight" type="CSGBox3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 7)
+size = Vector3(335, 4, 0.5)
+material = SubResource("StandardMaterial3D_tdu0e")
