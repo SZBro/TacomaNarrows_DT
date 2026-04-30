@@ -1,0 +1,3170 @@
+[gd_scene format=3 uid="uid://diaiwb55rqy0u"]
+
+[ext_resource type="Script" uid="uid://b8e3t550my26x" path="res://scripts/bridge/CableSystem.gd" id="1_ij6n4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ij6n4"]
+albedo_color = Color(0.73, 0.73, 0.7, 1)
+metallic = 0.3
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4jwf"]
+albedo_color = Color(0.68, 0.7, 0.66, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_txnhk"]
+albedo_color = Color(0.73, 0.73, 0.7, 1)
+metallic = 0.3
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hrv1e"]
+albedo_color = Color(0.68, 0.7, 0.66, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7neke"]
+albedo_color = Color(0.52, 0.53, 0.5, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o2yof"]
+albedo_color = Color(0.52, 0.53, 0.5, 1)
+
+[node name="CableSystem" type="Node3D" unique_id=1526939218]
+script = ExtResource("1_ij6n4")
+
+[node name="CableLeft_Seg_0" type="CSGCylinder3D" parent="." unique_id=379532966]
+transform = Transform3D(0.22701603, 0.9738911, 0, -0.9738911, 0.22701603, 0, 0, 0, 1, -751.26025, 41.104843, -10)
+radius = 0.9
+height = 9.733627
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_1" type="CSGCylinder3D" parent="." unique_id=1766725356]
+transform = Transform3D(0.2321465, 0.97268087, 0, -0.97268087, 0.2321465, 0, 0, 0, 1, -741.7867, 43.339497, -10)
+radius = 0.9
+height = 9.733564
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_2" type="CSGCylinder3D" parent="." unique_id=374757930]
+transform = Transform3D(0.23725027, 0.9714486, 0, -0.9714486, 0.23725027, 0, 0, 0, 1, -732.325, 45.623955, -10)
+radius = 0.9
+height = 9.733597
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_3" type="CSGCylinder3D" parent="." unique_id=424637220]
+transform = Transform3D(0.24233085, 0.9701936, 0, -0.9701936, 0.24233085, 0, 0, 0, 1, -722.8754, 47.957977, -10)
+radius = 0.9
+height = 9.733604
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_4" type="CSGCylinder3D" parent="." unique_id=916610900]
+transform = Transform3D(0.24738044, 0.96891844, 0, -0.96891844, 0.24738044, 0, 0, 0, 1, -713.4381, 50.34131, -10)
+radius = 0.9
+height = 9.733627
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_5" type="CSGCylinder3D" parent="." unique_id=2084311168]
+transform = Transform3D(0.252405, 0.9676217, 0, -0.9676217, 0.252405, 0, 0, 0, 1, -704.01337, 52.773674, -10)
+radius = 0.9
+height = 9.733616
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_6" type="CSGCylinder3D" parent="." unique_id=282679936]
+transform = Transform3D(0.25740224, 0.96630436, 0, -0.96630436, 0.25740224, 0, 0, 0, 1, -694.6013, 55.254807, -10)
+radius = 0.9
+height = 9.733621
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_7" type="CSGCylinder3D" parent="." unique_id=480745081]
+transform = Transform3D(0.2623731, 0.9649665, 0, -0.9649665, 0.2623731, 0, 0, 0, 1, -685.2022, 57.784447, -10)
+radius = 0.9
+height = 9.733579
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_8" type="CSGCylinder3D" parent="." unique_id=864687950]
+transform = Transform3D(0.26732147, 0.96360743, 0, -0.96360743, 0.26732147, 0, 0, 0, 1, -675.8162, 60.362366, -10)
+radius = 0.9
+height = 9.733627
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_9" type="CSGCylinder3D" parent="." unique_id=1853138398]
+transform = Transform3D(0.27226394, 0.9622226, 0, -0.9622226, 0.27226394, 0, 0, 0, 1, -666.4436, 62.988426, -10)
+radius = 0.9
+height = 9.733616
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_10" type="CSGCylinder3D" parent="." unique_id=1034733237]
+transform = Transform3D(0.27715856, 0.9608242, 0, -0.9608242, 0.27715856, 0, 0, 0, 1, -657.0845, 65.66235, -10)
+radius = 0.9
+height = 9.733554
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_11" type="CSGCylinder3D" parent="." unique_id=113039629]
+transform = Transform3D(0.2820207, 0.95940834, 0, -0.95940834, 0.2820207, 0, 0, 0, 1, -647.73914, 68.38376, -10)
+radius = 0.9
+height = 9.733605
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_12" type="CSGCylinder3D" parent="." unique_id=1734730798]
+transform = Transform3D(0.2868564, 0.95797366, 0, -0.95797366, 0.2868564, 0, 0, 0, 1, -638.4076, 71.152374, -10)
+radius = 0.9
+height = 9.733592
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_13" type="CSGCylinder3D" parent="." unique_id=652498024]
+transform = Transform3D(0.29166508, 0.95652056, 0, -0.95652056, 0.29166508, 0, 0, 0, 1, -629.0902, 73.96792, -10)
+radius = 0.9
+height = 9.733575
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_14" type="CSGCylinder3D" parent="." unique_id=1563134010]
+transform = Transform3D(0.29643816, 0.955052, 0, -0.955052, 0.29643816, 0, 0, 0, 1, -619.787, 76.83009, -10)
+radius = 0.9
+height = 9.733586
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_15" type="CSGCylinder3D" parent="." unique_id=961919063]
+transform = Transform3D(0.3011847, 0.95356584, 0, -0.95356584, 0.3011847, 0, 0, 0, 1, -610.49817, 79.73859, -10)
+radius = 0.9
+height = 9.733523
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_16" type="CSGCylinder3D" parent="." unique_id=586241460]
+transform = Transform3D(0.30590343, 0.95206255, 0, -0.95206255, 0.30590343, 0, 0, 0, 1, -601.2239, 82.693146, -10)
+radius = 0.9
+height = 9.73357
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_17" type="CSGCylinder3D" parent="." unique_id=1610954885]
+transform = Transform3D(0.31058735, 0.95054483, 0, -0.95054483, 0.31058735, 0, 0, 0, 1, -591.9643, 85.69348, -10)
+radius = 0.9
+height = 9.733573
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_18" type="CSGCylinder3D" parent="." unique_id=1398519649]
+transform = Transform3D(0.315246, 0.9490101, 0, -0.9490101, 0.315246, 0, 0, 0, 1, -582.7196, 88.73927, -10)
+radius = 0.9
+height = 9.733558
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_19" type="CSGCylinder3D" parent="." unique_id=1965476400]
+transform = Transform3D(0.31987, 0.9474615, 0, -0.9474615, 0.31987, 0, 0, 0, 1, -573.48987, 91.830246, -10)
+radius = 0.9
+height = 9.733555
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_20" type="CSGCylinder3D" parent="." unique_id=1080965931]
+transform = Transform3D(0.3244627, 0.94589853, 0, -0.94589853, 0.3244627, 0, 0, 0, 1, -564.27527, 94.96608, -10)
+radius = 0.9
+height = 9.733636
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_21" type="CSGCylinder3D" parent="." unique_id=676112632]
+transform = Transform3D(0.3290304, 0.9443193, 0, -0.9443193, 0.3290304, 0, 0, 0, 1, -555.0759, 98.1465, -10)
+radius = 0.9
+height = 9.733561
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_22" type="CSGCylinder3D" parent="." unique_id=728100267]
+transform = Transform3D(0.33356017, 0.9427288, 0, -0.9427288, 0.33356017, 0, 0, 0, 1, -545.8921, 101.371185, -10)
+radius = 0.9
+height = 9.733603
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_23" type="CSGCylinder3D" parent="." unique_id=400379311]
+transform = Transform3D(0.33806425, 0.94112307, 0, -0.94112307, 0.33806425, 0, 0, 0, 1, -536.72375, 104.63985, -10)
+radius = 0.9
+height = 9.733543
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_24" type="CSGCylinder3D" parent="." unique_id=2065552110]
+transform = Transform3D(0.34253186, 0.93950623, 0, -0.93950623, 0.34253186, 0, 0, 0, 1, -527.57117, 107.95215, -10)
+radius = 0.9
+height = 9.733533
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_25" type="CSGCylinder3D" parent="." unique_id=1005247295]
+transform = Transform3D(0.34697074, 0.937876, 0, -0.937876, 0.34697074, 0, 0, 0, 1, -518.43445, 111.3078, -10)
+radius = 0.9
+height = 9.733532
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_26" type="CSGCylinder3D" parent="." unique_id=376004924]
+transform = Transform3D(0.35137707, 0.93623406, 0, -0.93623406, 0.35137707, 0, 0, 0, 1, -509.31357, 114.70649, -10)
+radius = 0.9
+height = 9.733521
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_27" type="CSGCylinder3D" parent="." unique_id=1362851232]
+transform = Transform3D(0.35575235, 0.93458027, 0, -0.93458027, 0.35575235, 0, 0, 0, 1, -500.20874, 118.14792, -10)
+radius = 0.9
+height = 9.733537
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_28" type="CSGCylinder3D" parent="." unique_id=1730969390]
+transform = Transform3D(0.36009598, 0.9329153, 0, -0.9329153, 0.36009598, 0, 0, 0, 1, -491.12006, 121.6318, -10)
+radius = 0.9
+height = 9.733571
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_29" type="CSGCylinder3D" parent="." unique_id=36218223]
+transform = Transform3D(0.36440676, 0.9312399, 0, -0.9312399, 0.36440676, 0, 0, 0, 1, -482.04767, 125.157776, -10)
+radius = 0.9
+height = 9.733452
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_30" type="CSGCylinder3D" parent="." unique_id=522632054]
+transform = Transform3D(0.3686881, 0.92955315, 0, -0.92955315, 0.3686881, 0, 0, 0, 1, -472.99164, 128.72559, -10)
+radius = 0.9
+height = 9.733616
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_31" type="CSGCylinder3D" parent="." unique_id=1988944802]
+transform = Transform3D(0.37293375, 0.927858, 0, -0.927858, 0.37293375, 0, 0, 0, 1, -463.95197, 132.3349, -10)
+radius = 0.9
+height = 9.733604
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_32" type="CSGCylinder3D" parent="." unique_id=966687336]
+transform = Transform3D(0.37714553, 0.926154, 0, -0.926154, 0.37714553, 0, 0, 0, 1, -454.92883, 135.98541, -10)
+radius = 0.9
+height = 9.733654
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_33" type="CSGCylinder3D" parent="." unique_id=448454361]
+transform = Transform3D(0.38133305, 0.92443776, 0, -0.92443776, 0.38133305, 0, 0, 0, 1, -445.92236, 139.67677, -10)
+radius = 0.9
+height = 9.733567
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_34" type="CSGCylinder3D" parent="." unique_id=417544350]
+transform = Transform3D(0.38364083, 0.92348236, 0, -0.92348236, 0.38364083, 0, 0, 0, 1, -436.92896, 143.39972, -10)
+radius = 0.9
+height = 9.733525
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_35" type="CSGCylinder3D" parent="." unique_id=1656506065]
+transform = Transform3D(0.2080493, 0.9781183, 0, -0.9781183, 0.2080493, 0, 0, 0, 1, -427.89404, 146.2326, -10)
+radius = 0.9
+height = 9.28424
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_36" type="CSGCylinder3D" parent="." unique_id=880351975]
+transform = Transform3D(-0.2882173, 0.95756507, 0, -0.95756507, -0.2882173, 0, 0, 0, 1, -418.69327, 145.79572, -10)
+radius = 0.9
+height = 9.733538
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_37" type="CSGCylinder3D" parent="." unique_id=1096517931]
+transform = Transform3D(-0.28229332, 0.9593282, 0, -0.9593282, -0.28229332, 0, 0, 0, 1, -409.36417, 143.01917, -10)
+radius = 0.9
+height = 9.73359
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_38" type="CSGCylinder3D" parent="." unique_id=1399001764]
+transform = Transform3D(-0.27631748, 0.9610663, 0, -0.9610663, -0.27631748, 0, 0, 0, 1, -400.01807, 140.30054, -10)
+radius = 0.9
+height = 9.733418
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_39" type="CSGCylinder3D" parent="." unique_id=1803832953]
+transform = Transform3D(-0.27030373, 0.9627751, 0, -0.9627751, -0.27030373, 0, 0, 0, 1, -390.65527, 137.64029, -10)
+radius = 0.9
+height = 9.733482
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_40" type="CSGCylinder3D" parent="." unique_id=1482357010]
+transform = Transform3D(-0.26424718, 0.96445507, 0, -0.96445507, -0.26424718, 0, 0, 0, 1, -381.27594, 135.03876, -10)
+radius = 0.9
+height = 9.733457
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_41" type="CSGCylinder3D" parent="." unique_id=942474486]
+transform = Transform3D(-0.25815046, 0.96610475, 0, -0.96610475, -0.25815046, 0, 0, 0, 1, -371.88043, 132.4964, -10)
+radius = 0.9
+height = 9.733515
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_42" type="CSGCylinder3D" parent="." unique_id=1822410085]
+transform = Transform3D(-0.25200617, 0.9677256, 0, -0.9677256, -0.25200617, 0, 0, 0, 1, -362.469, 130.0136, -10)
+radius = 0.9
+height = 9.73342
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_43" type="CSGCylinder3D" parent="." unique_id=149200844]
+transform = Transform3D(-0.24582589, 0.96931404, 0, -0.96931404, -0.24582589, 0, 0, 0, 1, -353.0418, 127.59076, -10)
+radius = 0.9
+height = 9.733717
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_44" type="CSGCylinder3D" parent="." unique_id=2114086732]
+transform = Transform3D(-0.23960423, 0.9708706, 0, -0.9708706, -0.23960423, 0, 0, 0, 1, -343.5993, 125.22826, -10)
+radius = 0.9
+height = 9.733513
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_45" type="CSGCylinder3D" parent="." unique_id=851214877]
+transform = Transform3D(-0.23334396, 0.9723942, 0, -0.9723942, -0.23334396, 0, 0, 0, 1, -334.14188, 122.92653, -10)
+radius = 0.9
+height = 9.733608
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_46" type="CSGCylinder3D" parent="." unique_id=1561348696]
+transform = Transform3D(-0.2270441, 0.9738845, 0, -0.9738845, -0.2270441, 0, 0, 0, 1, -324.66968, 120.6859, -10)
+radius = 0.9
+height = 9.733724
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_47" type="CSGCylinder3D" parent="." unique_id=119951082]
+transform = Transform3D(-0.22070527, 0.9753405, 0, -0.9753405, -0.22070527, 0, 0, 0, 1, -315.18314, 118.506775, -10)
+radius = 0.9
+height = 9.733555
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_48" type="CSGCylinder3D" parent="." unique_id=548575229]
+transform = Transform3D(-0.21432853, 0.9767617, 0, -0.9767617, -0.21432853, 0, 0, 0, 1, -305.68268, 116.389565, -10)
+radius = 0.9
+height = 9.733577
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_49" type="CSGCylinder3D" parent="." unique_id=2095647946]
+transform = Transform3D(-0.20792079, 0.97814566, 0, -0.97814566, -0.20792079, 0, 0, 0, 1, -296.16858, 114.334564, -10)
+radius = 0.9
+height = 9.733564
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_50" type="CSGCylinder3D" parent="." unique_id=711856617]
+transform = Transform3D(-0.20147109, 0.9794945, 0, -0.9794945, -0.20147109, 0, 0, 0, 1, -286.64114, 112.34215, -10)
+radius = 0.9
+height = 9.733589
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_51" type="CSGCylinder3D" parent="." unique_id=924869719]
+transform = Transform3D(-0.19498944, 0.9808054, 0, -0.9808054, -0.19498944, 0, 0, 0, 1, -277.10074, 110.41264, -10)
+radius = 0.9
+height = 9.733647
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_52" type="CSGCylinder3D" parent="." unique_id=14097316]
+transform = Transform3D(-0.1884731, 0.9820783, 0, -0.9820783, -0.1884731, 0, 0, 0, 1, -267.54776, 108.54641, -10)
+radius = 0.9
+height = 9.733584
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_53" type="CSGCylinder3D" parent="." unique_id=1755993987]
+transform = Transform3D(-0.18192494, 0.98331237, 0, -0.98331237, -0.18192494, 0, 0, 0, 1, -257.9826, 106.74376, -10)
+radius = 0.9
+height = 9.7335825
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_54" type="CSGCylinder3D" parent="." unique_id=1886502916]
+transform = Transform3D(-0.17534423, 0.9845072, 0, -0.9845072, -0.17534423, 0, 0, 0, 1, -248.40558, 105.00499, -10)
+radius = 0.9
+height = 9.733704
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_55" type="CSGCylinder3D" parent="." unique_id=1650963867]
+transform = Transform3D(-0.16873169, 0.98566204, 0, -0.98566204, -0.16873169, 0, 0, 0, 1, -238.81714, 103.330444, -10)
+radius = 0.9
+height = 9.733539
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_56" type="CSGCylinder3D" parent="." unique_id=99305619]
+transform = Transform3D(-0.16209066, 0.9867758, 0, -0.9867758, -0.16209066, 0, 0, 0, 1, -229.21773, 101.7204, -10)
+radius = 0.9
+height = 9.733577
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_57" type="CSGCylinder3D" parent="." unique_id=980533477]
+transform = Transform3D(-0.15541887, 0.98784876, 0, -0.98784876, -0.15541887, 0, 0, 0, 1, -219.60765, 100.175156, -10)
+radius = 0.9
+height = 9.733571
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_58" type="CSGCylinder3D" parent="." unique_id=1742247183]
+transform = Transform3D(-0.14871931, 0.9888795, 0, -0.9888795, -0.14871931, 0, 0, 0, 1, -209.98738, 98.694984, -10)
+radius = 0.9
+height = 9.733485
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_59" type="CSGCylinder3D" parent="." unique_id=995682476]
+transform = Transform3D(-0.14199448, 0.9898675, 0, -0.9898675, -0.14199448, 0, 0, 0, 1, -200.35742, 97.28017, -10)
+radius = 0.9
+height = 9.733282
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_60" type="CSGCylinder3D" parent="." unique_id=528217444]
+transform = Transform3D(-0.13524246, 0.99081254, 0, -0.99081254, -0.13524246, 0, 0, 0, 1, -190.71797, 95.93093, -10)
+radius = 0.9
+height = 9.733685
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_61" type="CSGCylinder3D" parent="." unique_id=296759834]
+transform = Transform3D(-0.12846589, 0.991714, 0, -0.991714, -0.12846589, 0, 0, 0, 1, -181.06946, 94.64752, -10)
+radius = 0.9
+height = 9.733422
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_62" type="CSGCylinder3D" parent="." unique_id=85459631]
+transform = Transform3D(-0.12166476, 0.9925713, 0, -0.9925713, -0.12166476, 0, 0, 0, 1, -171.41243, 93.4302, -10)
+radius = 0.9
+height = 9.733594
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_63" type="CSGCylinder3D" parent="." unique_id=1253085996]
+transform = Transform3D(-0.11484313, 0.99338365, 0, -0.99338365, -0.11484313, 0, 0, 0, 1, -161.74725, 92.279175, -10)
+radius = 0.9
+height = 9.733453
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_64" type="CSGCylinder3D" parent="." unique_id=854031302]
+transform = Transform3D(-0.10799587, 0.99415135, 0, -0.99415135, -0.10799587, 0, 0, 0, 1, -152.0745, 91.19467, -10)
+radius = 0.9
+height = 9.733426
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_65" type="CSGCylinder3D" parent="." unique_id=988720478]
+transform = Transform3D(-0.1011343, 0.99487287, 0, -0.99487287, -0.1011343, 0, 0, 0, 1, -142.39447, 90.176895, -10)
+radius = 0.9
+height = 9.733438
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_66" type="CSGCylinder3D" parent="." unique_id=1437723394]
+transform = Transform3D(-0.094249725, 0.9955486, 0, -0.9955486, -0.094249725, 0, 0, 0, 1, -132.70766, 89.22602, -10)
+radius = 0.9
+height = 9.733429
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_67" type="CSGCylinder3D" parent="." unique_id=891827743]
+transform = Transform3D(-0.087350845, 0.99617755, 0, -0.99617755, -0.087350845, 0, 0, 0, 1, -123.01439, 88.34221, -10)
+radius = 0.9
+height = 9.733641
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_68" type="CSGCylinder3D" parent="." unique_id=1881225713]
+transform = Transform3D(-0.080430865, 0.9967602, 0, -0.9967602, -0.080430865, 0, 0, 0, 1, -113.31517, 87.52565, -10)
+radius = 0.9
+height = 9.73353
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_69" type="CSGCylinder3D" parent="." unique_id=1315065080]
+transform = Transform3D(-0.07349837, 0.9972953, 0, -0.9972953, -0.07349837, 0, 0, 0, 1, -103.61061, 86.77652, -10)
+radius = 0.9
+height = 9.733456
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_70" type="CSGCylinder3D" parent="." unique_id=1345395535]
+transform = Transform3D(-0.06655204, 0.99778306, 0, -0.99778306, -0.06655204, 0, 0, 0, 1, -93.9012, 86.09494, -10)
+radius = 0.9
+height = 9.733256
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_71" type="CSGCylinder3D" parent="." unique_id=1327367074]
+transform = Transform3D(-0.059593797, 0.9982227, 0, -0.9982227, -0.059593797, 0, 0, 0, 1, -84.187325, 85.48103, -10)
+radius = 0.9
+height = 9.733378
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_72" type="CSGCylinder3D" parent="." unique_id=763065858]
+transform = Transform3D(-0.05262053, 0.99861455, 0, -0.99861455, -0.05262053, 0, 0, 0, 1, -74.46934, 84.93492, -10)
+radius = 0.9
+height = 9.733379
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_73" type="CSGCylinder3D" parent="." unique_id=878882173]
+transform = Transform3D(-0.04564154, 0.9989579, 0, -0.9989579, -0.04564154, 0, 0, 0, 1, -64.74788, 84.45671, -10)
+radius = 0.9
+height = 9.733162
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_74" type="CSGCylinder3D" parent="." unique_id=1255795922]
+transform = Transform3D(-0.038650274, 0.9992528, 0, -0.9992528, -0.038650274, 0, 0, 0, 1, -55.023403, 84.0465, -10)
+radius = 0.9
+height = 9.73321
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_75" type="CSGCylinder3D" parent="." unique_id=1611571108]
+transform = Transform3D(-0.03165412, 0.9994989, 0, -0.9994989, -0.03165412, 0, 0, 0, 1, -45.296112, 83.70435, -10)
+radius = 0.9
+height = 9.73352
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_76" type="CSGCylinder3D" parent="." unique_id=642218351]
+transform = Transform3D(-0.024648905, 0.99969614, 0, -0.99969614, -0.024648905, 0, 0, 0, 1, -35.566475, 83.43034, -10)
+radius = 0.9
+height = 9.733596
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_77" type="CSGCylinder3D" parent="." unique_id=354776237]
+transform = Transform3D(-0.017642021, 0.99984443, 0, -0.99984443, -0.017642021, 0, 0, 0, 1, -25.83522, 83.22452, -10)
+radius = 0.9
+height = 9.733381
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_78" type="CSGCylinder3D" parent="." unique_id=1762932812]
+transform = Transform3D(-0.010630369, 0.9999435, 0, -0.9999435, -0.010630369, 0, 0, 0, 1, -16.102844, 83.08693, -10)
+radius = 0.9
+height = 9.733436
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_79" type="CSGCylinder3D" parent="." unique_id=429536254]
+transform = Transform3D(-0.0036149025, 0.9999934, 0, -0.9999934, -0.0036149025, 0, 0, 0, 1, -6.3695445, 83.0176, -10)
+radius = 0.9
+height = 9.733779
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_80" type="CSGCylinder3D" parent="." unique_id=1770629767]
+transform = Transform3D(0.0036101937, 0.9999935, 0, -0.9999935, 0.0036101937, 0, 0, 0, 1, 3.3641727, 83.01758, -10)
+radius = 0.9
+height = 9.733781
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_81" type="CSGCylinder3D" parent="." unique_id=127453157]
+transform = Transform3D(0.010625362, 0.9999436, 0, -0.9999436, 0.010625362, 0, 0, 0, 1, 13.097536, 83.08686, -10)
+radius = 0.9
+height = 9.733559
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_82" type="CSGCylinder3D" parent="." unique_id=2112497184]
+transform = Transform3D(0.017637908, 0.9998445, 0, -0.9998445, 0.017637908, 0, 0, 0, 1, 22.829975, 83.22441, -10)
+radius = 0.9
+height = 9.733383
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_83" type="CSGCylinder3D" parent="." unique_id=91876086]
+transform = Transform3D(0.024645984, 0.99969625, 0, -0.99969625, 0.024645984, 0, 0, 0, 1, 32.56132, 83.4302, -10)
+radius = 0.9
+height = 9.733778
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_84" type="CSGCylinder3D" parent="." unique_id=1800096909]
+transform = Transform3D(0.0316509, 0.999499, 0, -0.999499, 0.0316509, 0, 0, 0, 1, 42.291058, 83.704185, -10)
+radius = 0.9
+height = 9.73353
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_85" type="CSGCylinder3D" parent="." unique_id=426666142]
+transform = Transform3D(0.038646877, 0.999253, 0, -0.999253, 0.038646877, 0, 0, 0, 1, 52.018467, 84.04631, -10)
+radius = 0.9
+height = 9.733438
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_86" type="CSGCylinder3D" parent="." unique_id=1898881730]
+transform = Transform3D(0.045636833, 0.9989582, 0, -0.9989582, 0.045636833, 0, 0, 0, 1, 61.743057, 84.45648, -10)
+radius = 0.9
+height = 9.73316
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_87" type="CSGCylinder3D" parent="." unique_id=664684321]
+transform = Transform3D(0.052618444, 0.9986147, 0, -0.9986147, 0.052618444, 0, 0, 0, 1, 71.46449, 84.93466, -10)
+radius = 0.9
+height = 9.733332
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_88" type="CSGCylinder3D" parent="." unique_id=1011875346]
+transform = Transform3D(0.059589148, 0.99822295, 0, -0.99822295, 0.059589148, 0, 0, 0, 1, 81.18257, 85.48074, -10)
+radius = 0.9
+height = 9.733613
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_89" type="CSGCylinder3D" parent="." unique_id=2088935650]
+transform = Transform3D(0.06654817, 0.99778324, 0, -0.99778324, 0.06654817, 0, 0, 0, 1, 90.89661, 86.09462, -10)
+radius = 0.9
+height = 9.733323
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_90" type="CSGCylinder3D" parent="." unique_id=711965950]
+transform = Transform3D(0.07349658, 0.9972955, 0, -0.9972955, 0.07349658, 0, 0, 0, 1, 100.60605, 86.77618, -10)
+radius = 0.9
+height = 9.733462
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_91" type="CSGCylinder3D" parent="." unique_id=195087261]
+transform = Transform3D(0.080428064, 0.9967604, 0, -0.9967604, 0.080428064, 0, 0, 0, 1, 110.310684, 87.5253, -10)
+radius = 0.9
+height = 9.733659
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_92" type="CSGCylinder3D" parent="." unique_id=948973676]
+transform = Transform3D(0.087346554, 0.99617803, 0, -0.99617803, 0.087346554, 0, 0, 0, 1, 120.00999, 88.34183, -10)
+radius = 0.9
+height = 9.733689
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_93" type="CSGCylinder3D" parent="." unique_id=52077917]
+transform = Transform3D(0.094246745, 0.99554884, 0, -0.99554884, 0.094246745, 0, 0, 0, 1, 129.70328, 89.2256, -10)
+radius = 0.9
+height = 9.733418
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_94" type="CSGCylinder3D" parent="." unique_id=1096611214]
+transform = Transform3D(0.10113019, 0.9948732, 0, -0.9948732, 0.10113019, 0, 0, 0, 1, 139.39014, 90.17645, -10)
+radius = 0.9
+height = 9.733511
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_95" type="CSGCylinder3D" parent="." unique_id=789062639]
+transform = Transform3D(0.10799503, 0.9941515, 0, -0.9941515, 0.10799503, 0, 0, 0, 1, 149.07011, 91.1942, -10)
+radius = 0.9
+height = 9.733287
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_96" type="CSGCylinder3D" parent="." unique_id=365371146]
+transform = Transform3D(0.11483902, 0.9933841, 0, -0.9933841, 0.11483902, 0, 0, 0, 1, 158.7428, 92.278656, -10)
+radius = 0.9
+height = 9.733401
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_97" type="CSGCylinder3D" parent="." unique_id=397523629]
+transform = Transform3D(0.12166214, 0.9925716, 0, -0.9925716, 0.12166214, 0, 0, 0, 1, 168.40805, 93.429665, -10)
+radius = 0.9
+height = 9.73379
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_98" type="CSGCylinder3D" parent="." unique_id=53189590]
+transform = Transform3D(0.1284619, 0.9917145, 0, -0.9917145, 0.1284619, 0, 0, 0, 1, 178.06528, 94.64699, -10)
+radius = 0.9
+height = 9.733649
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_99" type="CSGCylinder3D" parent="." unique_id=1165641943]
+transform = Transform3D(0.1352396, 0.9908129, 0, -0.9908129, 0.1352396, 0, 0, 0, 1, 187.71382, 95.93036, -10)
+radius = 0.9
+height = 9.733496
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_100" type="CSGCylinder3D" parent="." unique_id=1144772465]
+transform = Transform3D(0.1419918, 0.98986787, 0, -0.98986787, 0.1419918, 0, 0, 0, 1, 197.35326, 97.27957, -10)
+radius = 0.9
+height = 9.733417
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_101" type="CSGCylinder3D" parent="." unique_id=1726284144]
+transform = Transform3D(0.14871657, 0.98887986, 0, -0.98887986, 0.14871657, 0, 0, 0, 1, 206.98328, 98.69437, -10)
+radius = 0.9
+height = 9.733498
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_102" type="CSGCylinder3D" parent="." unique_id=1124531649]
+transform = Transform3D(0.15541595, 0.9878491, 0, -0.9878491, 0.15541595, 0, 0, 0, 1, 216.60355, 100.174515, -10)
+radius = 0.9
+height = 9.733551
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_103" type="CSGCylinder3D" parent="." unique_id=1876343136]
+transform = Transform3D(0.1620872, 0.9867765, 0, -0.9867765, 0.1620872, 0, 0, 0, 1, 226.21362, 101.71973, -10)
+radius = 0.9
+height = 9.733586
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_104" type="CSGCylinder3D" parent="." unique_id=94138998]
+transform = Transform3D(0.16872859, 0.9856626, 0, -0.9856626, 0.16872859, 0, 0, 0, 1, 235.81308, 103.32974, -10)
+radius = 0.9
+height = 9.73358
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_105" type="CSGCylinder3D" parent="." unique_id=1892665062]
+transform = Transform3D(0.1753416, 0.9845077, 0, -0.9845077, 0.1753416, 0, 0, 0, 1, 245.40167, 105.004295, -10)
+radius = 0.9
+height = 9.733978
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_106" type="CSGCylinder3D" parent="." unique_id=1970613393]
+transform = Transform3D(0.18192303, 0.98331285, 0, -0.98331285, 0.18192303, 0, 0, 0, 1, 254.97919, 106.743126, -10)
+radius = 0.9
+height = 9.734276
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_107" type="CSGCylinder3D" parent="." unique_id=1676937417]
+transform = Transform3D(0.1884712, 0.98207873, 0, -0.98207873, 0.1884712, 0, 0, 0, 1, 264.5446, 108.54581, -10)
+radius = 0.9
+height = 9.733396
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_108" type="CSGCylinder3D" parent="." unique_id=2137008080]
+transform = Transform3D(0.19498718, 0.9808058, 0, -0.9808058, 0.19498718, 0, 0, 0, 1, 274.09747, 110.412, -10)
+radius = 0.9
+height = 9.733675
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_109" type="CSGCylinder3D" parent="." unique_id=300357588]
+transform = Transform3D(0.20146954, 0.9794948, 0, -0.9794948, 0.20146954, 0, 0, 0, 1, 283.63834, 112.341576, -10)
+radius = 0.9
+height = 9.734458
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_110" type="CSGCylinder3D" parent="." unique_id=398686232]
+transform = Transform3D(0.2079162, 0.9781466, 0, -0.9781466, 0.2079162, 0, 0, 0, 1, 293.16614, 114.334045, -10)
+radius = 0.9
+height = 9.733492
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_111" type="CSGCylinder3D" parent="." unique_id=1186052145]
+transform = Transform3D(0.21432996, 0.9767613, 0, -0.9767613, 0.21432996, 0, 0, 0, 1, 302.68024, 116.38902, -10)
+radius = 0.9
+height = 9.733612
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_112" type="CSGCylinder3D" parent="." unique_id=112396076]
+transform = Transform3D(0.22070366, 0.9753409, 0, -0.9753409, 0.22070366, 0, 0, 0, 1, 312.18073, 118.50624, -10)
+radius = 0.9
+height = 9.73352
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_113" type="CSGCylinder3D" parent="." unique_id=1447696196]
+transform = Transform3D(0.22704273, 0.9738848, 0, -0.9738848, 0.22704273, 0, 0, 0, 1, 321.6673, 120.685356, -10)
+radius = 0.9
+height = 9.733878
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_114" type="CSGCylinder3D" parent="." unique_id=1241564191]
+transform = Transform3D(0.23334098, 0.972395, 0, -0.972395, 0.23334098, 0, 0, 0, 1, 331.13965, 122.925995, -10)
+radius = 0.9
+height = 9.733695
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_115" type="CSGCylinder3D" parent="." unique_id=1905215114]
+transform = Transform3D(0.23960286, 0.970871, 0, -0.970871, 0.23960286, 0, 0, 0, 1, 340.5972, 125.22774, -10)
+radius = 0.9
+height = 9.733666
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_116" type="CSGCylinder3D" parent="." unique_id=2041428764]
+transform = Transform3D(0.24582475, 0.9693143, 0, -0.9693143, 0.24582475, 0, 0, 0, 1, 350.0393, 127.59012, -10)
+radius = 0.9
+height = 9.732738
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_117" type="CSGCylinder3D" parent="." unique_id=64962340]
+transform = Transform3D(0.2520048, 0.967726, 0, -0.967726, 0.2520048, 0, 0, 0, 1, 359.46588, 130.01279, -10)
+radius = 0.9
+height = 9.733165
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_118" type="CSGCylinder3D" parent="." unique_id=1363701727]
+transform = Transform3D(0.25814778, 0.96610546, 0, -0.96610546, 0.25814778, 0, 0, 0, 1, 368.8775, 132.49564, -10)
+radius = 0.9
+height = 9.734203
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_119" type="CSGCylinder3D" parent="." unique_id=445500968]
+transform = Transform3D(0.26424426, 0.9644558, 0, -0.9644558, 0.26424426, 0, 0, 0, 1, 378.2735, 135.03809, -10)
+radius = 0.9
+height = 9.733671
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_120" type="CSGCylinder3D" parent="." unique_id=1505939654]
+transform = Transform3D(0.27030516, 0.96277475, 0, -0.96277475, 0.27030516, 0, 0, 0, 1, 387.653, 137.63966, -10)
+radius = 0.9
+height = 9.733709
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_121" type="CSGCylinder3D" parent="." unique_id=98307381]
+transform = Transform3D(0.27631724, 0.9610665, 0, -0.9610665, 0.27631724, 0, 0, 0, 1, 397.01587, 140.29993, -10)
+radius = 0.9
+height = 9.733259
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_122" type="CSGCylinder3D" parent="." unique_id=427626608]
+transform = Transform3D(0.28228807, 0.9593297, 0, -0.9593297, 0.28228807, 0, 0, 0, 1, 406.36188, 143.01851, -10)
+radius = 0.9
+height = 9.733607
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_123" type="CSGCylinder3D" parent="." unique_id=1536998387]
+transform = Transform3D(0.28821582, 0.9575654, 0, -0.9575654, 0.28821582, 0, 0, 0, 1, 415.6914, 145.79514, -10)
+radius = 0.9
+height = 9.73433
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_124" type="CSGCylinder3D" parent="." unique_id=841837078]
+transform = Transform3D(-0.20793772, 0.9781421, 0, -0.9781421, -0.20793772, 0, 0, 0, 1, 424.89258, 146.2327, -10)
+radius = 0.9
+height = 9.284015
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_125" type="CSGCylinder3D" parent="." unique_id=458127233]
+transform = Transform3D(-0.38364065, 0.92348236, 0, -0.92348236, -0.38364065, 0, 0, 0, 1, 433.92755, 143.40031, -10)
+radius = 0.9
+height = 9.733723
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_126" type="CSGCylinder3D" parent="." unique_id=933413904]
+transform = Transform3D(-0.38133335, 0.9244376, 0, -0.9244376, -0.38133335, 0, 0, 0, 1, 442.92117, 139.67728, -10)
+radius = 0.9
+height = 9.7338
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_127" type="CSGCylinder3D" parent="." unique_id=526821108]
+transform = Transform3D(-0.3771466, 0.92615366, 0, -0.92615366, -0.3771466, 0, 0, 0, 1, 451.92773, 135.98587, -10)
+radius = 0.9
+height = 9.733592
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_128" type="CSGCylinder3D" parent="." unique_id=223091293]
+transform = Transform3D(-0.37293458, 0.92785764, 0, -0.92785764, -0.37293458, 0, 0, 0, 1, 460.9508, 132.33539, -10)
+radius = 0.9
+height = 9.733542
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_129" type="CSGCylinder3D" parent="." unique_id=1135479913]
+transform = Transform3D(-0.3686893, 0.9295527, 0, -0.9295527, -0.3686893, 0, 0, 0, 1, 469.9903, 128.7261, -10)
+radius = 0.9
+height = 9.733357
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_130" type="CSGCylinder3D" parent="." unique_id=2114036869]
+transform = Transform3D(-0.36440802, 0.93123937, 0, -0.93123937, -0.36440802, 0, 0, 0, 1, 479.0464, 125.15828, -10)
+radius = 0.9
+height = 9.733818
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_131" type="CSGCylinder3D" parent="." unique_id=373109361]
+transform = Transform3D(-0.36009562, 0.93291545, 0, -0.93291545, -0.36009562, 0, 0, 0, 1, 488.11865, 121.63234, -10)
+radius = 0.9
+height = 9.732947
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_132" type="CSGCylinder3D" parent="." unique_id=166918397]
+transform = Transform3D(-0.35575354, 0.9345798, 0, -0.9345798, -0.35575354, 0, 0, 0, 1, 497.207, 118.14859, -10)
+radius = 0.9
+height = 9.733443
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_133" type="CSGCylinder3D" parent="." unique_id=283502897]
+transform = Transform3D(-0.35138083, 0.9362326, 0, -0.9362326, -0.35138083, 0, 0, 0, 1, 506.31177, 114.70715, -10)
+radius = 0.9
+height = 9.733503
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_134" type="CSGCylinder3D" parent="." unique_id=1790335319]
+transform = Transform3D(-0.34697032, 0.93787605, 0, -0.93787605, -0.34697032, 0, 0, 0, 1, 515.4328, 111.308365, -10)
+radius = 0.9
+height = 9.733985
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_135" type="CSGCylinder3D" parent="." unique_id=814311429]
+transform = Transform3D(-0.34253037, 0.9395068, 0, -0.9395068, -0.34253037, 0, 0, 0, 1, 524.57, 107.952576, -10)
+radius = 0.9
+height = 9.733981
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_136" type="CSGCylinder3D" parent="." unique_id=1998805452]
+transform = Transform3D(-0.33806646, 0.9411222, 0, -0.9411222, -0.33806646, 0, 0, 0, 1, 533.72253, 104.640305, -10)
+radius = 0.9
+height = 9.732903
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_137" type="CSGCylinder3D" parent="." unique_id=408755085]
+transform = Transform3D(-0.33356237, 0.94272804, 0, -0.94272804, -0.33356237, 0, 0, 0, 1, 542.8904, 101.37179, -10)
+radius = 0.9
+height = 9.733287
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_138" type="CSGCylinder3D" parent="." unique_id=661527619]
+transform = Transform3D(-0.32902837, 0.9443201, 0, -0.9443201, -0.32902837, 0, 0, 0, 1, 552.0741, 98.147156, -10)
+radius = 0.9
+height = 9.733553
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_139" type="CSGCylinder3D" parent="." unique_id=1533717288]
+transform = Transform3D(-0.32446682, 0.945897, 0, -0.945897, -0.32446682, 0, 0, 0, 1, 561.2732, 94.966774, -10)
+radius = 0.9
+height = 9.733328
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_140" type="CSGCylinder3D" parent="." unique_id=331035820]
+transform = Transform3D(-0.31987023, 0.9474614, 0, -0.9474614, -0.31987023, 0, 0, 0, 1, 570.4878, 91.830925, -10)
+radius = 0.9
+height = 9.733813
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_141" type="CSGCylinder3D" parent="." unique_id=65472791]
+transform = Transform3D(-0.31524575, 0.94901013, 0, -0.94901013, -0.31524575, 0, 0, 0, 1, 579.71765, 88.73991, -10)
+radius = 0.9
+height = 9.733621
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_142" type="CSGCylinder3D" parent="." unique_id=1472720801]
+transform = Transform3D(-0.3105905, 0.9505438, 0, -0.9505438, -0.3105905, 0, 0, 0, 1, 588.9626, 85.69403, -10)
+radius = 0.9
+height = 9.733968
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_143" type="CSGCylinder3D" parent="." unique_id=1778198196]
+transform = Transform3D(-0.3059007, 0.9520634, 0, -0.9520634, -0.3059007, 0, 0, 0, 1, 598.2222, 82.69368, -10)
+radius = 0.9
+height = 9.733305
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_144" type="CSGCylinder3D" parent="." unique_id=24343942]
+transform = Transform3D(-0.30118608, 0.9535654, 0, -0.9535654, -0.30118608, 0, 0, 0, 1, 607.49646, 79.73912, -10)
+radius = 0.9
+height = 9.733784
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_145" type="CSGCylinder3D" parent="." unique_id=1027338448]
+transform = Transform3D(-0.2964412, 0.9550511, 0, -0.9550511, -0.2964412, 0, 0, 0, 1, 616.78577, 76.830475, -10)
+radius = 0.9
+height = 9.734235
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_146" type="CSGCylinder3D" parent="." unique_id=787097098]
+transform = Transform3D(-0.29166436, 0.9565207, 0, -0.9565207, -0.29166436, 0, 0, 0, 1, 626.08923, 73.968185, -10)
+radius = 0.9
+height = 9.733572
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_147" type="CSGCylinder3D" parent="." unique_id=2022621844]
+transform = Transform3D(-0.28685606, 0.9579737, 0, -0.9579737, -0.28685606, 0, 0, 0, 1, 635.4069, 71.15259, -10)
+radius = 0.9
+height = 9.734036
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_148" type="CSGCylinder3D" parent="." unique_id=1724515362]
+transform = Transform3D(-0.28202188, 0.959408, 0, -0.959408, -0.28202188, 0, 0, 0, 1, 644.7384, 68.38397, -10)
+radius = 0.9
+height = 9.733163
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_149" type="CSGCylinder3D" parent="." unique_id=1753717778]
+transform = Transform3D(-0.27716136, 0.9608234, 0, -0.9608234, -0.27716136, 0, 0, 0, 1, 654.08374, 65.66257, -10)
+radius = 0.9
+height = 9.733816
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_150" type="CSGCylinder3D" parent="." unique_id=405986885]
+transform = Transform3D(-0.27226186, 0.96222323, 0, -0.96222323, -0.27226186, 0, 0, 0, 1, 663.44305, 62.988564, -10)
+radius = 0.9
+height = 9.733928
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_151" type="CSGCylinder3D" parent="." unique_id=222257069]
+transform = Transform3D(-0.267321, 0.9636075, 0, -0.9636075, -0.267321, 0, 0, 0, 1, 672.8158, 60.36248, -10)
+radius = 0.9
+height = 9.7335615
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_152" type="CSGCylinder3D" parent="." unique_id=2099229837]
+transform = Transform3D(-0.26237142, 0.9649669, 0, -0.9649669, -0.26237142, 0, 0, 0, 1, 682.2018, 57.78459, -10)
+radius = 0.9
+height = 9.733511
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_153" type="CSGCylinder3D" parent="." unique_id=926264229]
+transform = Transform3D(-0.25740623, 0.96630317, 0, -0.96630317, -0.25740623, 0, 0, 0, 1, 691.6008, 55.25495, -10)
+radius = 0.9
+height = 9.733568
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_154" type="CSGCylinder3D" parent="." unique_id=144353532]
+transform = Transform3D(-0.25240386, 0.9676219, 0, -0.9676219, -0.25240386, 0, 0, 0, 1, 701.0129, 52.773796, -10)
+radius = 0.9
+height = 9.733738
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_155" type="CSGCylinder3D" parent="." unique_id=1137054494]
+transform = Transform3D(-0.24738085, 0.9689184, 0, -0.9689184, -0.24738085, 0, 0, 0, 1, 710.43744, 50.34149, -10)
+radius = 0.9
+height = 9.733062
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_156" type="CSGCylinder3D" parent="." unique_id=270964785]
+transform = Transform3D(-0.24233007, 0.9701938, 0, -0.9701938, -0.24233007, 0, 0, 0, 1, 719.8745, 47.95822, -10)
+radius = 0.9
+height = 9.733728
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_157" type="CSGCylinder3D" parent="." unique_id=2075729364]
+transform = Transform3D(-0.23725271, 0.97144794, 0, -0.97144794, -0.23725271, 0, 0, 0, 1, 729.32434, 45.62413, -10)
+radius = 0.9
+height = 9.733917
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_158" type="CSGCylinder3D" parent="." unique_id=1309977744]
+transform = Transform3D(-0.23214698, 0.9726806, 0, -0.9726806, -0.23214698, 0, 0, 0, 1, 738.7864, 43.339558, -10)
+radius = 0.9
+height = 9.734131
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Seg_159" type="CSGCylinder3D" parent="." unique_id=1807310642]
+transform = Transform3D(-0.22701538, 0.9738912, 0, -0.9738912, -0.22701538, 0, 0, 0, 1, 748.26025, 41.104843, -10)
+radius = 0.9
+height = 9.733625
+material = SubResource("StandardMaterial3D_ij6n4")
+
+[node name="CableLeft_Hanger_4" type="CSGCylinder3D" parent="." unique_id=280689961]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -700, 52.601234, -10)
+radius = 0.18
+height = 3.2024727
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_5" type="CSGCylinder3D" parent="." unique_id=509342915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -686, 54.213417, -10)
+radius = 0.18
+height = 6.426834
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_6" type="CSGCylinder3D" parent="." unique_id=2053354136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -672, 56.279648, -10)
+radius = 0.18
+height = 10.559299
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_7" type="CSGCylinder3D" parent="." unique_id=1738581396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -658, 58.412025, -10)
+radius = 0.18
+height = 14.824051
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_8" type="CSGCylinder3D" parent="." unique_id=746190337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -644, 60.158485, -10)
+radius = 0.18
+height = 18.31697
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_9" type="CSGCylinder3D" parent="." unique_id=873612925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -630, 62.398285, -10)
+radius = 0.18
+height = 22.79657
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_10" type="CSGCylinder3D" parent="." unique_id=213693954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -616, 64.69415, -10)
+radius = 0.18
+height = 27.388313
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_11" type="CSGCylinder3D" parent="." unique_id=1448989528]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -602, 66.5773, -10)
+radius = 0.18
+height = 31.154594
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_12" type="CSGCylinder3D" parent="." unique_id=734719725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -588, 68.981415, -10)
+radius = 0.18
+height = 35.962822
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_13" type="CSGCylinder3D" parent="." unique_id=787091150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -574, 71.44472, -10)
+radius = 0.18
+height = 40.889427
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_14" type="CSGCylinder3D" parent="." unique_id=696930315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -560, 73.962524, -10)
+radius = 0.18
+height = 45.92504
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_15" type="CSGCylinder3D" parent="." unique_id=1039990128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -546, 76.020355, -10)
+radius = 0.18
+height = 50.040718
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_16" type="CSGCylinder3D" parent="." unique_id=1456762298]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -532, 78.64256, -10)
+radius = 0.18
+height = 55.285126
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_17" type="CSGCylinder3D" parent="." unique_id=1466359056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -518, 81.32004, -10)
+radius = 0.18
+height = 60.640076
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_18" type="CSGCylinder3D" parent="." unique_id=257800448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -504, 84.05179, -10)
+radius = 0.18
+height = 66.10358
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_19" type="CSGCylinder3D" parent="." unique_id=674165613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -490, 86.27617, -10)
+radius = 0.18
+height = 70.552345
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_20" type="CSGCylinder3D" parent="." unique_id=878972049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -476, 89.10829, -10)
+radius = 0.18
+height = 76.21659
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_21" type="CSGCylinder3D" parent="." unique_id=93053891]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -462, 91.990456, -10)
+radius = 0.18
+height = 81.98091
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_22" type="CSGCylinder3D" parent="." unique_id=327795282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -448, 94.92788, -10)
+radius = 0.18
+height = 87.85576
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_23" type="CSGCylinder3D" parent="." unique_id=1850444379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -434, 97.90989, -10)
+radius = 0.18
+height = 93.81978
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_24" type="CSGCylinder3D" parent="." unique_id=1158260532]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -420, 98.42226, -10)
+radius = 0.18
+height = 94.84451
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_25" type="CSGCylinder3D" parent="." unique_id=242245099]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -406, 96.647125, -10)
+radius = 0.18
+height = 91.29425
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_26" type="CSGCylinder3D" parent="." unique_id=257972888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -392, 94.50181, -10)
+radius = 0.18
+height = 87.00362
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_27" type="CSGCylinder3D" parent="." unique_id=211973056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -378, 92.4269, -10)
+radius = 0.18
+height = 82.853806
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_28" type="CSGCylinder3D" parent="." unique_id=1045868208]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -364, 90.82405, -10)
+radius = 0.18
+height = 79.6481
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_29" type="CSGCylinder3D" parent="." unique_id=235396202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -350, 88.88486, -10)
+radius = 0.18
+height = 75.769714
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_30" type="CSGCylinder3D" parent="." unique_id=366492016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -336, 87.028305, -10)
+radius = 0.18
+height = 72.05662
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_31" type="CSGCylinder3D" parent="." unique_id=1496876444]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -322, 85.594666, -10)
+radius = 0.18
+height = 69.18932
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_32" type="CSGCylinder3D" parent="." unique_id=1579510036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -308, 83.880066, -10)
+radius = 0.18
+height = 65.76014
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_33" type="CSGCylinder3D" parent="." unique_id=1551035761]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -294, 82.561295, -10)
+radius = 0.18
+height = 63.12258
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_34" type="CSGCylinder3D" parent="." unique_id=523594060]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -280, 80.98927, -10)
+radius = 0.18
+height = 59.97854
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_35" type="CSGCylinder3D" parent="." unique_id=251716853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -266, 79.49358, -10)
+radius = 0.18
+height = 56.987167
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_36" type="CSGCylinder3D" parent="." unique_id=853604001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -252, 78.3601, -10)
+radius = 0.18
+height = 54.7202
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_37" type="CSGCylinder3D" parent="." unique_id=1583460410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -238, 77.010704, -10)
+radius = 0.18
+height = 52.021408
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_38" type="CSGCylinder3D" parent="." unique_id=1124086641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -224, 75.996506, -10)
+radius = 0.18
+height = 49.99301
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_39" type="CSGCylinder3D" parent="." unique_id=16706847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -210, 74.79696, -10)
+radius = 0.18
+height = 47.593918
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_40" type="CSGCylinder3D" parent="." unique_id=79422487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196, 73.90213, -10)
+radius = 0.18
+height = 45.804268
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_41" type="CSGCylinder3D" parent="." unique_id=819424149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -182, 72.85472, -10)
+radius = 0.18
+height = 43.709442
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_42" type="CSGCylinder3D" parent="." unique_id=1968827516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -168, 72.080154, -10)
+radius = 0.18
+height = 42.160316
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_43" type="CSGCylinder3D" parent="." unique_id=540948477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -154, 71.186386, -10)
+radius = 0.18
+height = 40.37278
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_44" type="CSGCylinder3D" parent="." unique_id=1823982647]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -140, 70.53348, -10)
+radius = 0.18
+height = 39.066956
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_45" type="CSGCylinder3D" parent="." unique_id=529254617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126, 69.79463, -10)
+radius = 0.18
+height = 37.58927
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_46" type="CSGCylinder3D" parent="." unique_id=1955194310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112, 69.26452, -10)
+radius = 0.18
+height = 36.529037
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_47" type="CSGCylinder3D" parent="." unique_id=2067475152]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 68.68167, -10)
+radius = 0.18
+height = 35.363342
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_48" type="CSGCylinder3D" parent="." unique_id=990356268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -84, 68.275345, -10)
+radius = 0.18
+height = 34.550682
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_49" type="CSGCylinder3D" parent="." unique_id=1734906229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 67.849335, -10)
+radius = 0.18
+height = 33.69867
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_50" type="CSGCylinder3D" parent="." unique_id=1968282960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 67.56751, -10)
+radius = 0.18
+height = 33.135025
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_51" type="CSGCylinder3D" parent="." unique_id=626265962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 67.29898, -10)
+radius = 0.18
+height = 32.59796
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_52" type="CSGCylinder3D" parent="." unique_id=465030902]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 67.14217, -10)
+radius = 0.18
+height = 32.284348
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_53" type="CSGCylinder3D" parent="." unique_id=1598687081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 67.03151, -10)
+radius = 0.18
+height = 32.06301
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_54" type="CSGCylinder3D" parent="." unique_id=1592009841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 67, -10)
+radius = 0.18
+height = 32.000008
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_55" type="CSGCylinder3D" parent="." unique_id=116304358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 67.04737, -10)
+radius = 0.18
+height = 32.09474
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_56" type="CSGCylinder3D" parent="." unique_id=433136464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 67.14213, -10)
+radius = 0.18
+height = 32.284256
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_57" type="CSGCylinder3D" parent="." unique_id=910088808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 67.346565, -10)
+radius = 0.18
+height = 32.69313
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_58" type="CSGCylinder3D" parent="." unique_id=1378598509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 67.56742, -10)
+radius = 0.18
+height = 33.134842
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_59" type="CSGCylinder3D" parent="." unique_id=816340431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 67.92858, -10)
+radius = 0.18
+height = 33.857162
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_60" type="CSGCylinder3D" parent="." unique_id=1944227411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 68.27521, -10)
+radius = 0.18
+height = 34.550415
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_61" type="CSGCylinder3D" parent="." unique_id=1230384489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98, 68.79248, -10)
+radius = 0.18
+height = 35.58496
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_62" type="CSGCylinder3D" parent="." unique_id=1434956016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112, 69.26434, -10)
+radius = 0.18
+height = 36.528687
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_63" type="CSGCylinder3D" parent="." unique_id=1087027998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126, 69.93689, -10)
+radius = 0.18
+height = 37.87377
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_64" type="CSGCylinder3D" parent="." unique_id=984447168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140, 70.6914, -10)
+radius = 0.18
+height = 39.382797
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_65" type="CSGCylinder3D" parent="." unique_id=2074074019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 154, 71.359886, -10)
+radius = 0.18
+height = 40.719772
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_66" type="CSGCylinder3D" parent="." unique_id=707715523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 168, 72.26776, -10)
+radius = 0.18
+height = 42.53553
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_67" type="CSGCylinder3D" parent="." unique_id=230781161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 182, 73.05929, -10)
+radius = 0.18
+height = 44.118576
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_68" type="CSGCylinder3D" parent="." unique_id=324360301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 196, 74.119, -10)
+radius = 0.18
+height = 46.238007
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_69" type="CSGCylinder3D" parent="." unique_id=1133243883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 210, 75.03232, -10)
+radius = 0.18
+height = 48.064644
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_70" type="CSGCylinder3D" parent="." unique_id=1345588176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 224, 76.242134, -10)
+radius = 0.18
+height = 50.48427
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_71" type="CSGCylinder3D" parent="." unique_id=719104544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 238, 77.275955, -10)
+radius = 0.18
+height = 52.551918
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_72" type="CSGCylinder3D" parent="." unique_id=1768750150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 252, 78.63611, -10)
+radius = 0.18
+height = 55.272217
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_73" type="CSGCylinder3D" parent="." unique_id=2013856015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 266, 79.78682, -10)
+radius = 0.18
+height = 57.57363
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_74" type="CSGCylinder3D" parent="." unique_id=1819960806]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 280, 81.29542, -10)
+radius = 0.18
+height = 60.590836
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_75" type="CSGCylinder3D" parent="." unique_id=1221321061]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 294, 82.88742, -10)
+radius = 0.18
+height = 63.77484
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_76" type="CSGCylinder3D" parent="." unique_id=1392051454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 308, 84.216064, -10)
+radius = 0.18
+height = 66.43213
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_77" type="CSGCylinder3D" parent="." unique_id=190105046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 322, 85.95026, -10)
+radius = 0.18
+height = 69.90052
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_78" type="CSGCylinder3D" parent="." unique_id=1553990008]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 336, 87.39371, -10)
+radius = 0.18
+height = 72.78742
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_79" type="CSGCylinder3D" parent="." unique_id=1099152377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 350, 89.26759, -10)
+radius = 0.18
+height = 76.53519
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_80" type="CSGCylinder3D" parent="." unique_id=1224312012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 364, 91.218254, -10)
+radius = 0.18
+height = 80.43651
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_81" type="CSGCylinder3D" parent="." unique_id=516335791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 378, 92.83461, -10)
+radius = 0.18
+height = 83.66922
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_82" type="CSGCylinder3D" parent="." unique_id=1243505134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 392, 94.92469, -10)
+radius = 0.18
+height = 87.84938
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_83" type="CSGCylinder3D" parent="." unique_id=750344088]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 406, 97.08843, -10)
+radius = 0.18
+height = 92.176865
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_84" type="CSGCylinder3D" parent="." unique_id=332025616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 420, 98.873276, -10)
+radius = 0.18
+height = 95.74655
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_85" type="CSGCylinder3D" parent="." unique_id=749247429]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 434, 97.3134, -10)
+radius = 0.18
+height = 92.6268
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_86" type="CSGCylinder3D" parent="." unique_id=1958169384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 448, 94.33676, -10)
+radius = 0.18
+height = 86.67352
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_87" type="CSGCylinder3D" parent="." unique_id=1580556683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 462, 91.40995, -10)
+radius = 0.18
+height = 80.8199
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_88" type="CSGCylinder3D" parent="." unique_id=1500492534]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 476, 88.53793, -10)
+radius = 0.18
+height = 75.075874
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_89" type="CSGCylinder3D" parent="." unique_id=1051080817]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 490, 85.718285, -10)
+radius = 0.18
+height = 69.43657
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_90" type="CSGCylinder3D" parent="." unique_id=1787962673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 504, 83.502495, -10)
+radius = 0.18
+height = 65.00499
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_91" type="CSGCylinder3D" parent="." unique_id=667137195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 518, 80.77838, -10)
+radius = 0.18
+height = 59.556763
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_92" type="CSGCylinder3D" parent="." unique_id=1934080243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 532, 78.1145, -10)
+radius = 0.18
+height = 54.22901
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_93" type="CSGCylinder3D" parent="." unique_id=999871255]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 546, 75.50268, -10)
+radius = 0.18
+height = 49.005356
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_94" type="CSGCylinder3D" parent="." unique_id=583465271]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 560, 72.949905, -10)
+radius = 0.18
+height = 43.899803
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_95" type="CSGCylinder3D" parent="." unique_id=1017451092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 574, 70.94586, -10)
+radius = 0.18
+height = 39.89173
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_96" type="CSGCylinder3D" parent="." unique_id=905905894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 588, 68.49725, -10)
+radius = 0.18
+height = 34.9945
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_97" type="CSGCylinder3D" parent="." unique_id=321693618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 602, 66.10248, -10)
+radius = 0.18
+height = 30.204964
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_98" type="CSGCylinder3D" parent="." unique_id=147097576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 616, 64.23233, -10)
+radius = 0.18
+height = 26.464668
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_99" type="CSGCylinder3D" parent="." unique_id=1184633737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 630, 61.94392, -10)
+radius = 0.18
+height = 21.88784
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_100" type="CSGCylinder3D" parent="." unique_id=1177168912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 644, 59.71927, -10)
+radius = 0.18
+height = 17.438538
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_101" type="CSGCylinder3D" parent="." unique_id=513631784]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 658, 57.98043, -10)
+radius = 0.18
+height = 13.960861
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_102" type="CSGCylinder3D" parent="." unique_id=1241503055]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 672, 55.86335, -10)
+radius = 0.18
+height = 9.726696
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_103" type="CSGCylinder3D" parent="." unique_id=430659170]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 686, 53.804916, -10)
+radius = 0.18
+height = 5.609833
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableLeft_Hanger_104" type="CSGCylinder3D" parent="." unique_id=832558857]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 700, 52.206066, -10)
+radius = 0.18
+height = 2.4121323
+material = SubResource("StandardMaterial3D_t4jwf")
+
+[node name="CableRight_Seg_0" type="CSGCylinder3D" parent="." unique_id=123537300]
+transform = Transform3D(0.22701603, 0.9738911, 0, -0.9738911, 0.22701603, 0, 0, 0, 1, -751.26025, 41.104843, 10)
+radius = 0.9
+height = 9.733627
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_1" type="CSGCylinder3D" parent="." unique_id=724730366]
+transform = Transform3D(0.2321465, 0.97268087, 0, -0.97268087, 0.2321465, 0, 0, 0, 1, -741.7867, 43.339497, 10)
+radius = 0.9
+height = 9.733564
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_2" type="CSGCylinder3D" parent="." unique_id=309038191]
+transform = Transform3D(0.23725027, 0.9714486, 0, -0.9714486, 0.23725027, 0, 0, 0, 1, -732.325, 45.623955, 10)
+radius = 0.9
+height = 9.733597
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_3" type="CSGCylinder3D" parent="." unique_id=1530425379]
+transform = Transform3D(0.24233085, 0.9701936, 0, -0.9701936, 0.24233085, 0, 0, 0, 1, -722.8754, 47.957977, 10)
+radius = 0.9
+height = 9.733604
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_4" type="CSGCylinder3D" parent="." unique_id=1613665778]
+transform = Transform3D(0.24738044, 0.96891844, 0, -0.96891844, 0.24738044, 0, 0, 0, 1, -713.4381, 50.34131, 10)
+radius = 0.9
+height = 9.733627
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_5" type="CSGCylinder3D" parent="." unique_id=1381764797]
+transform = Transform3D(0.252405, 0.9676217, 0, -0.9676217, 0.252405, 0, 0, 0, 1, -704.01337, 52.773674, 10)
+radius = 0.9
+height = 9.733616
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_6" type="CSGCylinder3D" parent="." unique_id=1202623146]
+transform = Transform3D(0.25740224, 0.96630436, 0, -0.96630436, 0.25740224, 0, 0, 0, 1, -694.6013, 55.254807, 10)
+radius = 0.9
+height = 9.733621
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_7" type="CSGCylinder3D" parent="." unique_id=1061543267]
+transform = Transform3D(0.2623731, 0.9649665, 0, -0.9649665, 0.2623731, 0, 0, 0, 1, -685.2022, 57.784447, 10)
+radius = 0.9
+height = 9.733579
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_8" type="CSGCylinder3D" parent="." unique_id=1346518695]
+transform = Transform3D(0.26732147, 0.96360743, 0, -0.96360743, 0.26732147, 0, 0, 0, 1, -675.8162, 60.362366, 10)
+radius = 0.9
+height = 9.733627
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_9" type="CSGCylinder3D" parent="." unique_id=218705157]
+transform = Transform3D(0.27226394, 0.9622226, 0, -0.9622226, 0.27226394, 0, 0, 0, 1, -666.4436, 62.988426, 10)
+radius = 0.9
+height = 9.733616
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_10" type="CSGCylinder3D" parent="." unique_id=1332835593]
+transform = Transform3D(0.27715856, 0.9608242, 0, -0.9608242, 0.27715856, 0, 0, 0, 1, -657.0845, 65.66235, 10)
+radius = 0.9
+height = 9.733554
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_11" type="CSGCylinder3D" parent="." unique_id=1203718019]
+transform = Transform3D(0.2820207, 0.95940834, 0, -0.95940834, 0.2820207, 0, 0, 0, 1, -647.73914, 68.38376, 10)
+radius = 0.9
+height = 9.733605
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_12" type="CSGCylinder3D" parent="." unique_id=696143793]
+transform = Transform3D(0.2868564, 0.95797366, 0, -0.95797366, 0.2868564, 0, 0, 0, 1, -638.4076, 71.152374, 10)
+radius = 0.9
+height = 9.733592
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_13" type="CSGCylinder3D" parent="." unique_id=1850534522]
+transform = Transform3D(0.29166508, 0.95652056, 0, -0.95652056, 0.29166508, 0, 0, 0, 1, -629.0902, 73.96792, 10)
+radius = 0.9
+height = 9.733575
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_14" type="CSGCylinder3D" parent="." unique_id=784808946]
+transform = Transform3D(0.29643816, 0.955052, 0, -0.955052, 0.29643816, 0, 0, 0, 1, -619.787, 76.83009, 10)
+radius = 0.9
+height = 9.733586
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_15" type="CSGCylinder3D" parent="." unique_id=1700698234]
+transform = Transform3D(0.3011847, 0.95356584, 0, -0.95356584, 0.3011847, 0, 0, 0, 1, -610.49817, 79.73859, 10)
+radius = 0.9
+height = 9.733523
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_16" type="CSGCylinder3D" parent="." unique_id=721346540]
+transform = Transform3D(0.30590343, 0.95206255, 0, -0.95206255, 0.30590343, 0, 0, 0, 1, -601.2239, 82.693146, 10)
+radius = 0.9
+height = 9.73357
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_17" type="CSGCylinder3D" parent="." unique_id=601473356]
+transform = Transform3D(0.31058735, 0.95054483, 0, -0.95054483, 0.31058735, 0, 0, 0, 1, -591.9643, 85.69348, 10)
+radius = 0.9
+height = 9.733573
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_18" type="CSGCylinder3D" parent="." unique_id=1013695142]
+transform = Transform3D(0.315246, 0.9490101, 0, -0.9490101, 0.315246, 0, 0, 0, 1, -582.7196, 88.73927, 10)
+radius = 0.9
+height = 9.733558
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_19" type="CSGCylinder3D" parent="." unique_id=1564343064]
+transform = Transform3D(0.31987, 0.9474615, 0, -0.9474615, 0.31987, 0, 0, 0, 1, -573.48987, 91.830246, 10)
+radius = 0.9
+height = 9.733555
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_20" type="CSGCylinder3D" parent="." unique_id=1265370072]
+transform = Transform3D(0.3244627, 0.94589853, 0, -0.94589853, 0.3244627, 0, 0, 0, 1, -564.27527, 94.96608, 10)
+radius = 0.9
+height = 9.733636
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_21" type="CSGCylinder3D" parent="." unique_id=2119321473]
+transform = Transform3D(0.3290304, 0.9443193, 0, -0.9443193, 0.3290304, 0, 0, 0, 1, -555.0759, 98.1465, 10)
+radius = 0.9
+height = 9.733561
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_22" type="CSGCylinder3D" parent="." unique_id=1775030656]
+transform = Transform3D(0.33356017, 0.9427288, 0, -0.9427288, 0.33356017, 0, 0, 0, 1, -545.8921, 101.371185, 10)
+radius = 0.9
+height = 9.733603
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_23" type="CSGCylinder3D" parent="." unique_id=1524529893]
+transform = Transform3D(0.33806425, 0.94112307, 0, -0.94112307, 0.33806425, 0, 0, 0, 1, -536.72375, 104.63985, 10)
+radius = 0.9
+height = 9.733543
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_24" type="CSGCylinder3D" parent="." unique_id=1677806088]
+transform = Transform3D(0.34253186, 0.93950623, 0, -0.93950623, 0.34253186, 0, 0, 0, 1, -527.57117, 107.95215, 10)
+radius = 0.9
+height = 9.733533
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_25" type="CSGCylinder3D" parent="." unique_id=1493377459]
+transform = Transform3D(0.34697074, 0.937876, 0, -0.937876, 0.34697074, 0, 0, 0, 1, -518.43445, 111.3078, 10)
+radius = 0.9
+height = 9.733532
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_26" type="CSGCylinder3D" parent="." unique_id=1039237765]
+transform = Transform3D(0.35137707, 0.93623406, 0, -0.93623406, 0.35137707, 0, 0, 0, 1, -509.31357, 114.70649, 10)
+radius = 0.9
+height = 9.733521
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_27" type="CSGCylinder3D" parent="." unique_id=2098876806]
+transform = Transform3D(0.35575235, 0.93458027, 0, -0.93458027, 0.35575235, 0, 0, 0, 1, -500.20874, 118.14792, 10)
+radius = 0.9
+height = 9.733537
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_28" type="CSGCylinder3D" parent="." unique_id=1125652703]
+transform = Transform3D(0.36009598, 0.9329153, 0, -0.9329153, 0.36009598, 0, 0, 0, 1, -491.12006, 121.6318, 10)
+radius = 0.9
+height = 9.733571
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_29" type="CSGCylinder3D" parent="." unique_id=1279778508]
+transform = Transform3D(0.36440676, 0.9312399, 0, -0.9312399, 0.36440676, 0, 0, 0, 1, -482.04767, 125.157776, 10)
+radius = 0.9
+height = 9.733452
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_30" type="CSGCylinder3D" parent="." unique_id=916664173]
+transform = Transform3D(0.3686881, 0.92955315, 0, -0.92955315, 0.3686881, 0, 0, 0, 1, -472.99164, 128.72559, 10)
+radius = 0.9
+height = 9.733616
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_31" type="CSGCylinder3D" parent="." unique_id=483723207]
+transform = Transform3D(0.37293375, 0.927858, 0, -0.927858, 0.37293375, 0, 0, 0, 1, -463.95197, 132.3349, 10)
+radius = 0.9
+height = 9.733604
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_32" type="CSGCylinder3D" parent="." unique_id=775758779]
+transform = Transform3D(0.37714553, 0.926154, 0, -0.926154, 0.37714553, 0, 0, 0, 1, -454.92883, 135.98541, 10)
+radius = 0.9
+height = 9.733654
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_33" type="CSGCylinder3D" parent="." unique_id=871634517]
+transform = Transform3D(0.38133305, 0.92443776, 0, -0.92443776, 0.38133305, 0, 0, 0, 1, -445.92236, 139.67677, 10)
+radius = 0.9
+height = 9.733567
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_34" type="CSGCylinder3D" parent="." unique_id=219474503]
+transform = Transform3D(0.38364083, 0.92348236, 0, -0.92348236, 0.38364083, 0, 0, 0, 1, -436.92896, 143.39972, 10)
+radius = 0.9
+height = 9.733525
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_35" type="CSGCylinder3D" parent="." unique_id=37700286]
+transform = Transform3D(0.2080493, 0.9781183, 0, -0.9781183, 0.2080493, 0, 0, 0, 1, -427.89404, 146.2326, 10)
+radius = 0.9
+height = 9.28424
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_36" type="CSGCylinder3D" parent="." unique_id=154303467]
+transform = Transform3D(-0.2882173, 0.95756507, 0, -0.95756507, -0.2882173, 0, 0, 0, 1, -418.69327, 145.79572, 10)
+radius = 0.9
+height = 9.733538
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_37" type="CSGCylinder3D" parent="." unique_id=1763516147]
+transform = Transform3D(-0.28229332, 0.9593282, 0, -0.9593282, -0.28229332, 0, 0, 0, 1, -409.36417, 143.01917, 10)
+radius = 0.9
+height = 9.73359
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_38" type="CSGCylinder3D" parent="." unique_id=1509237834]
+transform = Transform3D(-0.27631748, 0.9610663, 0, -0.9610663, -0.27631748, 0, 0, 0, 1, -400.01807, 140.30054, 10)
+radius = 0.9
+height = 9.733418
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_39" type="CSGCylinder3D" parent="." unique_id=1583998368]
+transform = Transform3D(-0.27030373, 0.9627751, 0, -0.9627751, -0.27030373, 0, 0, 0, 1, -390.65527, 137.64029, 10)
+radius = 0.9
+height = 9.733482
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_40" type="CSGCylinder3D" parent="." unique_id=11635252]
+transform = Transform3D(-0.26424718, 0.96445507, 0, -0.96445507, -0.26424718, 0, 0, 0, 1, -381.27594, 135.03876, 10)
+radius = 0.9
+height = 9.733457
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_41" type="CSGCylinder3D" parent="." unique_id=154274810]
+transform = Transform3D(-0.25815046, 0.96610475, 0, -0.96610475, -0.25815046, 0, 0, 0, 1, -371.88043, 132.4964, 10)
+radius = 0.9
+height = 9.733515
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_42" type="CSGCylinder3D" parent="." unique_id=549132466]
+transform = Transform3D(-0.25200617, 0.9677256, 0, -0.9677256, -0.25200617, 0, 0, 0, 1, -362.469, 130.0136, 10)
+radius = 0.9
+height = 9.73342
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_43" type="CSGCylinder3D" parent="." unique_id=62603185]
+transform = Transform3D(-0.24582589, 0.96931404, 0, -0.96931404, -0.24582589, 0, 0, 0, 1, -353.0418, 127.59076, 10)
+radius = 0.9
+height = 9.733717
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_44" type="CSGCylinder3D" parent="." unique_id=574417033]
+transform = Transform3D(-0.23960423, 0.9708706, 0, -0.9708706, -0.23960423, 0, 0, 0, 1, -343.5993, 125.22826, 10)
+radius = 0.9
+height = 9.733513
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_45" type="CSGCylinder3D" parent="." unique_id=1579082086]
+transform = Transform3D(-0.23334396, 0.9723942, 0, -0.9723942, -0.23334396, 0, 0, 0, 1, -334.14188, 122.92653, 10)
+radius = 0.9
+height = 9.733608
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_46" type="CSGCylinder3D" parent="." unique_id=844147385]
+transform = Transform3D(-0.2270441, 0.9738845, 0, -0.9738845, -0.2270441, 0, 0, 0, 1, -324.66968, 120.6859, 10)
+radius = 0.9
+height = 9.733724
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_47" type="CSGCylinder3D" parent="." unique_id=783472601]
+transform = Transform3D(-0.22070527, 0.9753405, 0, -0.9753405, -0.22070527, 0, 0, 0, 1, -315.18314, 118.506775, 10)
+radius = 0.9
+height = 9.733555
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_48" type="CSGCylinder3D" parent="." unique_id=1987065153]
+transform = Transform3D(-0.21432853, 0.9767617, 0, -0.9767617, -0.21432853, 0, 0, 0, 1, -305.68268, 116.389565, 10)
+radius = 0.9
+height = 9.733577
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_49" type="CSGCylinder3D" parent="." unique_id=1144681400]
+transform = Transform3D(-0.20792079, 0.97814566, 0, -0.97814566, -0.20792079, 0, 0, 0, 1, -296.16858, 114.334564, 10)
+radius = 0.9
+height = 9.733564
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_50" type="CSGCylinder3D" parent="." unique_id=1423741916]
+transform = Transform3D(-0.20147109, 0.9794945, 0, -0.9794945, -0.20147109, 0, 0, 0, 1, -286.64114, 112.34215, 10)
+radius = 0.9
+height = 9.733589
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_51" type="CSGCylinder3D" parent="." unique_id=414827452]
+transform = Transform3D(-0.19498944, 0.9808054, 0, -0.9808054, -0.19498944, 0, 0, 0, 1, -277.10074, 110.41264, 10)
+radius = 0.9
+height = 9.733647
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_52" type="CSGCylinder3D" parent="." unique_id=944874186]
+transform = Transform3D(-0.1884731, 0.9820783, 0, -0.9820783, -0.1884731, 0, 0, 0, 1, -267.54776, 108.54641, 10)
+radius = 0.9
+height = 9.733584
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_53" type="CSGCylinder3D" parent="." unique_id=906110655]
+transform = Transform3D(-0.18192494, 0.98331237, 0, -0.98331237, -0.18192494, 0, 0, 0, 1, -257.9826, 106.74376, 10)
+radius = 0.9
+height = 9.7335825
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_54" type="CSGCylinder3D" parent="." unique_id=633431571]
+transform = Transform3D(-0.17534423, 0.9845072, 0, -0.9845072, -0.17534423, 0, 0, 0, 1, -248.40558, 105.00499, 10)
+radius = 0.9
+height = 9.733704
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_55" type="CSGCylinder3D" parent="." unique_id=1263923457]
+transform = Transform3D(-0.16873169, 0.98566204, 0, -0.98566204, -0.16873169, 0, 0, 0, 1, -238.81714, 103.330444, 10)
+radius = 0.9
+height = 9.733539
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_56" type="CSGCylinder3D" parent="." unique_id=1981649101]
+transform = Transform3D(-0.16209066, 0.9867758, 0, -0.9867758, -0.16209066, 0, 0, 0, 1, -229.21773, 101.7204, 10)
+radius = 0.9
+height = 9.733577
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_57" type="CSGCylinder3D" parent="." unique_id=1644781212]
+transform = Transform3D(-0.15541887, 0.98784876, 0, -0.98784876, -0.15541887, 0, 0, 0, 1, -219.60765, 100.175156, 10)
+radius = 0.9
+height = 9.733571
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_58" type="CSGCylinder3D" parent="." unique_id=2058853230]
+transform = Transform3D(-0.14871931, 0.9888795, 0, -0.9888795, -0.14871931, 0, 0, 0, 1, -209.98738, 98.694984, 10)
+radius = 0.9
+height = 9.733485
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_59" type="CSGCylinder3D" parent="." unique_id=621037912]
+transform = Transform3D(-0.14199448, 0.9898675, 0, -0.9898675, -0.14199448, 0, 0, 0, 1, -200.35742, 97.28017, 10)
+radius = 0.9
+height = 9.733282
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_60" type="CSGCylinder3D" parent="." unique_id=1186197894]
+transform = Transform3D(-0.13524246, 0.99081254, 0, -0.99081254, -0.13524246, 0, 0, 0, 1, -190.71797, 95.93093, 10)
+radius = 0.9
+height = 9.733685
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_61" type="CSGCylinder3D" parent="." unique_id=533100160]
+transform = Transform3D(-0.12846589, 0.991714, 0, -0.991714, -0.12846589, 0, 0, 0, 1, -181.06946, 94.64752, 10)
+radius = 0.9
+height = 9.733422
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_62" type="CSGCylinder3D" parent="." unique_id=62700414]
+transform = Transform3D(-0.12166476, 0.9925713, 0, -0.9925713, -0.12166476, 0, 0, 0, 1, -171.41243, 93.4302, 10)
+radius = 0.9
+height = 9.733594
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_63" type="CSGCylinder3D" parent="." unique_id=88303991]
+transform = Transform3D(-0.11484313, 0.99338365, 0, -0.99338365, -0.11484313, 0, 0, 0, 1, -161.74725, 92.279175, 10)
+radius = 0.9
+height = 9.733453
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_64" type="CSGCylinder3D" parent="." unique_id=729823094]
+transform = Transform3D(-0.10799587, 0.99415135, 0, -0.99415135, -0.10799587, 0, 0, 0, 1, -152.0745, 91.19467, 10)
+radius = 0.9
+height = 9.733426
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_65" type="CSGCylinder3D" parent="." unique_id=1092380344]
+transform = Transform3D(-0.1011343, 0.99487287, 0, -0.99487287, -0.1011343, 0, 0, 0, 1, -142.39447, 90.176895, 10)
+radius = 0.9
+height = 9.733438
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_66" type="CSGCylinder3D" parent="." unique_id=2125016593]
+transform = Transform3D(-0.094249725, 0.9955486, 0, -0.9955486, -0.094249725, 0, 0, 0, 1, -132.70766, 89.22602, 10)
+radius = 0.9
+height = 9.733429
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_67" type="CSGCylinder3D" parent="." unique_id=183573416]
+transform = Transform3D(-0.087350845, 0.99617755, 0, -0.99617755, -0.087350845, 0, 0, 0, 1, -123.01439, 88.34221, 10)
+radius = 0.9
+height = 9.733641
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_68" type="CSGCylinder3D" parent="." unique_id=810901475]
+transform = Transform3D(-0.080430865, 0.9967602, 0, -0.9967602, -0.080430865, 0, 0, 0, 1, -113.31517, 87.52565, 10)
+radius = 0.9
+height = 9.73353
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_69" type="CSGCylinder3D" parent="." unique_id=1485999708]
+transform = Transform3D(-0.07349837, 0.9972953, 0, -0.9972953, -0.07349837, 0, 0, 0, 1, -103.61061, 86.77652, 10)
+radius = 0.9
+height = 9.733456
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_70" type="CSGCylinder3D" parent="." unique_id=642316735]
+transform = Transform3D(-0.06655204, 0.99778306, 0, -0.99778306, -0.06655204, 0, 0, 0, 1, -93.9012, 86.09494, 10)
+radius = 0.9
+height = 9.733256
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_71" type="CSGCylinder3D" parent="." unique_id=1955839382]
+transform = Transform3D(-0.059593797, 0.9982227, 0, -0.9982227, -0.059593797, 0, 0, 0, 1, -84.187325, 85.48103, 10)
+radius = 0.9
+height = 9.733378
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_72" type="CSGCylinder3D" parent="." unique_id=890352408]
+transform = Transform3D(-0.05262053, 0.99861455, 0, -0.99861455, -0.05262053, 0, 0, 0, 1, -74.46934, 84.93492, 10)
+radius = 0.9
+height = 9.733379
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_73" type="CSGCylinder3D" parent="." unique_id=255408849]
+transform = Transform3D(-0.04564154, 0.9989579, 0, -0.9989579, -0.04564154, 0, 0, 0, 1, -64.74788, 84.45671, 10)
+radius = 0.9
+height = 9.733162
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_74" type="CSGCylinder3D" parent="." unique_id=1436172388]
+transform = Transform3D(-0.038650274, 0.9992528, 0, -0.9992528, -0.038650274, 0, 0, 0, 1, -55.023403, 84.0465, 10)
+radius = 0.9
+height = 9.73321
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_75" type="CSGCylinder3D" parent="." unique_id=1847749676]
+transform = Transform3D(-0.03165412, 0.9994989, 0, -0.9994989, -0.03165412, 0, 0, 0, 1, -45.296112, 83.70435, 10)
+radius = 0.9
+height = 9.73352
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_76" type="CSGCylinder3D" parent="." unique_id=1169123251]
+transform = Transform3D(-0.024648905, 0.99969614, 0, -0.99969614, -0.024648905, 0, 0, 0, 1, -35.566475, 83.43034, 10)
+radius = 0.9
+height = 9.733596
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_77" type="CSGCylinder3D" parent="." unique_id=2009346477]
+transform = Transform3D(-0.017642021, 0.99984443, 0, -0.99984443, -0.017642021, 0, 0, 0, 1, -25.83522, 83.22452, 10)
+radius = 0.9
+height = 9.733381
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_78" type="CSGCylinder3D" parent="." unique_id=2110554425]
+transform = Transform3D(-0.010630369, 0.9999435, 0, -0.9999435, -0.010630369, 0, 0, 0, 1, -16.102844, 83.08693, 10)
+radius = 0.9
+height = 9.733436
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_79" type="CSGCylinder3D" parent="." unique_id=19980425]
+transform = Transform3D(-0.0036149025, 0.9999934, 0, -0.9999934, -0.0036149025, 0, 0, 0, 1, -6.3695445, 83.0176, 10)
+radius = 0.9
+height = 9.733779
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_80" type="CSGCylinder3D" parent="." unique_id=9799638]
+transform = Transform3D(0.0036101937, 0.9999935, 0, -0.9999935, 0.0036101937, 0, 0, 0, 1, 3.3641727, 83.01758, 10)
+radius = 0.9
+height = 9.733781
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_81" type="CSGCylinder3D" parent="." unique_id=28062555]
+transform = Transform3D(0.010625362, 0.9999436, 0, -0.9999436, 0.010625362, 0, 0, 0, 1, 13.097536, 83.08686, 10)
+radius = 0.9
+height = 9.733559
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_82" type="CSGCylinder3D" parent="." unique_id=1178589150]
+transform = Transform3D(0.017637908, 0.9998445, 0, -0.9998445, 0.017637908, 0, 0, 0, 1, 22.829975, 83.22441, 10)
+radius = 0.9
+height = 9.733383
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_83" type="CSGCylinder3D" parent="." unique_id=1848825503]
+transform = Transform3D(0.024645984, 0.99969625, 0, -0.99969625, 0.024645984, 0, 0, 0, 1, 32.56132, 83.4302, 10)
+radius = 0.9
+height = 9.733778
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_84" type="CSGCylinder3D" parent="." unique_id=390595369]
+transform = Transform3D(0.0316509, 0.999499, 0, -0.999499, 0.0316509, 0, 0, 0, 1, 42.291058, 83.704185, 10)
+radius = 0.9
+height = 9.73353
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_85" type="CSGCylinder3D" parent="." unique_id=328383181]
+transform = Transform3D(0.038646877, 0.999253, 0, -0.999253, 0.038646877, 0, 0, 0, 1, 52.018467, 84.04631, 10)
+radius = 0.9
+height = 9.733438
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_86" type="CSGCylinder3D" parent="." unique_id=1421157019]
+transform = Transform3D(0.045636833, 0.9989582, 0, -0.9989582, 0.045636833, 0, 0, 0, 1, 61.743057, 84.45648, 10)
+radius = 0.9
+height = 9.73316
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_87" type="CSGCylinder3D" parent="." unique_id=617707223]
+transform = Transform3D(0.052618444, 0.9986147, 0, -0.9986147, 0.052618444, 0, 0, 0, 1, 71.46449, 84.93466, 10)
+radius = 0.9
+height = 9.733332
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_88" type="CSGCylinder3D" parent="." unique_id=846402464]
+transform = Transform3D(0.059589148, 0.99822295, 0, -0.99822295, 0.059589148, 0, 0, 0, 1, 81.18257, 85.48074, 10)
+radius = 0.9
+height = 9.733613
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_89" type="CSGCylinder3D" parent="." unique_id=369702404]
+transform = Transform3D(0.06654817, 0.99778324, 0, -0.99778324, 0.06654817, 0, 0, 0, 1, 90.89661, 86.09462, 10)
+radius = 0.9
+height = 9.733323
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_90" type="CSGCylinder3D" parent="." unique_id=584241042]
+transform = Transform3D(0.07349658, 0.9972955, 0, -0.9972955, 0.07349658, 0, 0, 0, 1, 100.60605, 86.77618, 10)
+radius = 0.9
+height = 9.733462
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_91" type="CSGCylinder3D" parent="." unique_id=660411512]
+transform = Transform3D(0.080428064, 0.9967604, 0, -0.9967604, 0.080428064, 0, 0, 0, 1, 110.310684, 87.5253, 10)
+radius = 0.9
+height = 9.733659
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_92" type="CSGCylinder3D" parent="." unique_id=1212110669]
+transform = Transform3D(0.087346554, 0.99617803, 0, -0.99617803, 0.087346554, 0, 0, 0, 1, 120.00999, 88.34183, 10)
+radius = 0.9
+height = 9.733689
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_93" type="CSGCylinder3D" parent="." unique_id=1886849099]
+transform = Transform3D(0.094246745, 0.99554884, 0, -0.99554884, 0.094246745, 0, 0, 0, 1, 129.70328, 89.2256, 10)
+radius = 0.9
+height = 9.733418
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_94" type="CSGCylinder3D" parent="." unique_id=994540821]
+transform = Transform3D(0.10113019, 0.9948732, 0, -0.9948732, 0.10113019, 0, 0, 0, 1, 139.39014, 90.17645, 10)
+radius = 0.9
+height = 9.733511
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_95" type="CSGCylinder3D" parent="." unique_id=2034174043]
+transform = Transform3D(0.10799503, 0.9941515, 0, -0.9941515, 0.10799503, 0, 0, 0, 1, 149.07011, 91.1942, 10)
+radius = 0.9
+height = 9.733287
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_96" type="CSGCylinder3D" parent="." unique_id=1652130734]
+transform = Transform3D(0.11483902, 0.9933841, 0, -0.9933841, 0.11483902, 0, 0, 0, 1, 158.7428, 92.278656, 10)
+radius = 0.9
+height = 9.733401
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_97" type="CSGCylinder3D" parent="." unique_id=1883148572]
+transform = Transform3D(0.12166214, 0.9925716, 0, -0.9925716, 0.12166214, 0, 0, 0, 1, 168.40805, 93.429665, 10)
+radius = 0.9
+height = 9.73379
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_98" type="CSGCylinder3D" parent="." unique_id=527489377]
+transform = Transform3D(0.1284619, 0.9917145, 0, -0.9917145, 0.1284619, 0, 0, 0, 1, 178.06528, 94.64699, 10)
+radius = 0.9
+height = 9.733649
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_99" type="CSGCylinder3D" parent="." unique_id=1280351198]
+transform = Transform3D(0.1352396, 0.9908129, 0, -0.9908129, 0.1352396, 0, 0, 0, 1, 187.71382, 95.93036, 10)
+radius = 0.9
+height = 9.733496
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_100" type="CSGCylinder3D" parent="." unique_id=871128548]
+transform = Transform3D(0.1419918, 0.98986787, 0, -0.98986787, 0.1419918, 0, 0, 0, 1, 197.35326, 97.27957, 10)
+radius = 0.9
+height = 9.733417
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_101" type="CSGCylinder3D" parent="." unique_id=1171089790]
+transform = Transform3D(0.14871657, 0.98887986, 0, -0.98887986, 0.14871657, 0, 0, 0, 1, 206.98328, 98.69437, 10)
+radius = 0.9
+height = 9.733498
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_102" type="CSGCylinder3D" parent="." unique_id=8811002]
+transform = Transform3D(0.15541595, 0.9878491, 0, -0.9878491, 0.15541595, 0, 0, 0, 1, 216.60355, 100.174515, 10)
+radius = 0.9
+height = 9.733551
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_103" type="CSGCylinder3D" parent="." unique_id=259044851]
+transform = Transform3D(0.1620872, 0.9867765, 0, -0.9867765, 0.1620872, 0, 0, 0, 1, 226.21362, 101.71973, 10)
+radius = 0.9
+height = 9.733586
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_104" type="CSGCylinder3D" parent="." unique_id=1342885329]
+transform = Transform3D(0.16872859, 0.9856626, 0, -0.9856626, 0.16872859, 0, 0, 0, 1, 235.81308, 103.32974, 10)
+radius = 0.9
+height = 9.73358
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_105" type="CSGCylinder3D" parent="." unique_id=223109437]
+transform = Transform3D(0.1753416, 0.9845077, 0, -0.9845077, 0.1753416, 0, 0, 0, 1, 245.40167, 105.004295, 10)
+radius = 0.9
+height = 9.733978
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_106" type="CSGCylinder3D" parent="." unique_id=1918895756]
+transform = Transform3D(0.18192303, 0.98331285, 0, -0.98331285, 0.18192303, 0, 0, 0, 1, 254.97919, 106.743126, 10)
+radius = 0.9
+height = 9.734276
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_107" type="CSGCylinder3D" parent="." unique_id=1342336568]
+transform = Transform3D(0.1884712, 0.98207873, 0, -0.98207873, 0.1884712, 0, 0, 0, 1, 264.5446, 108.54581, 10)
+radius = 0.9
+height = 9.733396
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_108" type="CSGCylinder3D" parent="." unique_id=1379348986]
+transform = Transform3D(0.19498718, 0.9808058, 0, -0.9808058, 0.19498718, 0, 0, 0, 1, 274.09747, 110.412, 10)
+radius = 0.9
+height = 9.733675
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_109" type="CSGCylinder3D" parent="." unique_id=1641730392]
+transform = Transform3D(0.20146954, 0.9794948, 0, -0.9794948, 0.20146954, 0, 0, 0, 1, 283.63834, 112.341576, 10)
+radius = 0.9
+height = 9.734458
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_110" type="CSGCylinder3D" parent="." unique_id=1429530957]
+transform = Transform3D(0.2079162, 0.9781466, 0, -0.9781466, 0.2079162, 0, 0, 0, 1, 293.16614, 114.334045, 10)
+radius = 0.9
+height = 9.733492
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_111" type="CSGCylinder3D" parent="." unique_id=2124562922]
+transform = Transform3D(0.21432996, 0.9767613, 0, -0.9767613, 0.21432996, 0, 0, 0, 1, 302.68024, 116.38902, 10)
+radius = 0.9
+height = 9.733612
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_112" type="CSGCylinder3D" parent="." unique_id=617618895]
+transform = Transform3D(0.22070366, 0.9753409, 0, -0.9753409, 0.22070366, 0, 0, 0, 1, 312.18073, 118.50624, 10)
+radius = 0.9
+height = 9.73352
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_113" type="CSGCylinder3D" parent="." unique_id=1862977847]
+transform = Transform3D(0.22704273, 0.9738848, 0, -0.9738848, 0.22704273, 0, 0, 0, 1, 321.6673, 120.685356, 10)
+radius = 0.9
+height = 9.733878
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_114" type="CSGCylinder3D" parent="." unique_id=1574141024]
+transform = Transform3D(0.23334098, 0.972395, 0, -0.972395, 0.23334098, 0, 0, 0, 1, 331.13965, 122.925995, 10)
+radius = 0.9
+height = 9.733695
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_115" type="CSGCylinder3D" parent="." unique_id=805330743]
+transform = Transform3D(0.23960286, 0.970871, 0, -0.970871, 0.23960286, 0, 0, 0, 1, 340.5972, 125.22774, 10)
+radius = 0.9
+height = 9.733666
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_116" type="CSGCylinder3D" parent="." unique_id=783527280]
+transform = Transform3D(0.24582475, 0.9693143, 0, -0.9693143, 0.24582475, 0, 0, 0, 1, 350.0393, 127.59012, 10)
+radius = 0.9
+height = 9.732738
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_117" type="CSGCylinder3D" parent="." unique_id=937908382]
+transform = Transform3D(0.2520048, 0.967726, 0, -0.967726, 0.2520048, 0, 0, 0, 1, 359.46588, 130.01279, 10)
+radius = 0.9
+height = 9.733165
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_118" type="CSGCylinder3D" parent="." unique_id=1387859629]
+transform = Transform3D(0.25814778, 0.96610546, 0, -0.96610546, 0.25814778, 0, 0, 0, 1, 368.8775, 132.49564, 10)
+radius = 0.9
+height = 9.734203
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_119" type="CSGCylinder3D" parent="." unique_id=2062119926]
+transform = Transform3D(0.26424426, 0.9644558, 0, -0.9644558, 0.26424426, 0, 0, 0, 1, 378.2735, 135.03809, 10)
+radius = 0.9
+height = 9.733671
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_120" type="CSGCylinder3D" parent="." unique_id=1157093273]
+transform = Transform3D(0.27030516, 0.96277475, 0, -0.96277475, 0.27030516, 0, 0, 0, 1, 387.653, 137.63966, 10)
+radius = 0.9
+height = 9.733709
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_121" type="CSGCylinder3D" parent="." unique_id=1722087925]
+transform = Transform3D(0.27631724, 0.9610665, 0, -0.9610665, 0.27631724, 0, 0, 0, 1, 397.01587, 140.29993, 10)
+radius = 0.9
+height = 9.733259
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_122" type="CSGCylinder3D" parent="." unique_id=1794372940]
+transform = Transform3D(0.28228807, 0.9593297, 0, -0.9593297, 0.28228807, 0, 0, 0, 1, 406.36188, 143.01851, 10)
+radius = 0.9
+height = 9.733607
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_123" type="CSGCylinder3D" parent="." unique_id=1738750116]
+transform = Transform3D(0.28821582, 0.9575654, 0, -0.9575654, 0.28821582, 0, 0, 0, 1, 415.6914, 145.79514, 10)
+radius = 0.9
+height = 9.73433
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_124" type="CSGCylinder3D" parent="." unique_id=91019312]
+transform = Transform3D(-0.20793772, 0.9781421, 0, -0.9781421, -0.20793772, 0, 0, 0, 1, 424.89258, 146.2327, 10)
+radius = 0.9
+height = 9.284015
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_125" type="CSGCylinder3D" parent="." unique_id=1399138687]
+transform = Transform3D(-0.38364065, 0.92348236, 0, -0.92348236, -0.38364065, 0, 0, 0, 1, 433.92755, 143.40031, 10)
+radius = 0.9
+height = 9.733723
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_126" type="CSGCylinder3D" parent="." unique_id=507805156]
+transform = Transform3D(-0.38133335, 0.9244376, 0, -0.9244376, -0.38133335, 0, 0, 0, 1, 442.92117, 139.67728, 10)
+radius = 0.9
+height = 9.7338
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_127" type="CSGCylinder3D" parent="." unique_id=255116083]
+transform = Transform3D(-0.3771466, 0.92615366, 0, -0.92615366, -0.3771466, 0, 0, 0, 1, 451.92773, 135.98587, 10)
+radius = 0.9
+height = 9.733592
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_128" type="CSGCylinder3D" parent="." unique_id=1974698038]
+transform = Transform3D(-0.37293458, 0.92785764, 0, -0.92785764, -0.37293458, 0, 0, 0, 1, 460.9508, 132.33539, 10)
+radius = 0.9
+height = 9.733542
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_129" type="CSGCylinder3D" parent="." unique_id=652329882]
+transform = Transform3D(-0.3686893, 0.9295527, 0, -0.9295527, -0.3686893, 0, 0, 0, 1, 469.9903, 128.7261, 10)
+radius = 0.9
+height = 9.733357
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_130" type="CSGCylinder3D" parent="." unique_id=2118832664]
+transform = Transform3D(-0.36440802, 0.93123937, 0, -0.93123937, -0.36440802, 0, 0, 0, 1, 479.0464, 125.15828, 10)
+radius = 0.9
+height = 9.733818
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_131" type="CSGCylinder3D" parent="." unique_id=1748807607]
+transform = Transform3D(-0.36009562, 0.93291545, 0, -0.93291545, -0.36009562, 0, 0, 0, 1, 488.11865, 121.63234, 10)
+radius = 0.9
+height = 9.732947
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_132" type="CSGCylinder3D" parent="." unique_id=402106889]
+transform = Transform3D(-0.35575354, 0.9345798, 0, -0.9345798, -0.35575354, 0, 0, 0, 1, 497.207, 118.14859, 10)
+radius = 0.9
+height = 9.733443
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_133" type="CSGCylinder3D" parent="." unique_id=1296449684]
+transform = Transform3D(-0.35138083, 0.9362326, 0, -0.9362326, -0.35138083, 0, 0, 0, 1, 506.31177, 114.70715, 10)
+radius = 0.9
+height = 9.733503
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_134" type="CSGCylinder3D" parent="." unique_id=541474455]
+transform = Transform3D(-0.34697032, 0.93787605, 0, -0.93787605, -0.34697032, 0, 0, 0, 1, 515.4328, 111.308365, 10)
+radius = 0.9
+height = 9.733985
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_135" type="CSGCylinder3D" parent="." unique_id=1981862502]
+transform = Transform3D(-0.34253037, 0.9395068, 0, -0.9395068, -0.34253037, 0, 0, 0, 1, 524.57, 107.952576, 10)
+radius = 0.9
+height = 9.733981
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_136" type="CSGCylinder3D" parent="." unique_id=1447544892]
+transform = Transform3D(-0.33806646, 0.9411222, 0, -0.9411222, -0.33806646, 0, 0, 0, 1, 533.72253, 104.640305, 10)
+radius = 0.9
+height = 9.732903
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_137" type="CSGCylinder3D" parent="." unique_id=1819504512]
+transform = Transform3D(-0.33356237, 0.94272804, 0, -0.94272804, -0.33356237, 0, 0, 0, 1, 542.8904, 101.37179, 10)
+radius = 0.9
+height = 9.733287
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_138" type="CSGCylinder3D" parent="." unique_id=1585359279]
+transform = Transform3D(-0.32902837, 0.9443201, 0, -0.9443201, -0.32902837, 0, 0, 0, 1, 552.0741, 98.147156, 10)
+radius = 0.9
+height = 9.733553
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_139" type="CSGCylinder3D" parent="." unique_id=1968837705]
+transform = Transform3D(-0.32446682, 0.945897, 0, -0.945897, -0.32446682, 0, 0, 0, 1, 561.2732, 94.966774, 10)
+radius = 0.9
+height = 9.733328
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_140" type="CSGCylinder3D" parent="." unique_id=1500862004]
+transform = Transform3D(-0.31987023, 0.9474614, 0, -0.9474614, -0.31987023, 0, 0, 0, 1, 570.4878, 91.830925, 10)
+radius = 0.9
+height = 9.733813
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_141" type="CSGCylinder3D" parent="." unique_id=1027545016]
+transform = Transform3D(-0.31524575, 0.94901013, 0, -0.94901013, -0.31524575, 0, 0, 0, 1, 579.71765, 88.73991, 10)
+radius = 0.9
+height = 9.733621
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_142" type="CSGCylinder3D" parent="." unique_id=1989184817]
+transform = Transform3D(-0.3105905, 0.9505438, 0, -0.9505438, -0.3105905, 0, 0, 0, 1, 588.9626, 85.69403, 10)
+radius = 0.9
+height = 9.733968
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_143" type="CSGCylinder3D" parent="." unique_id=951409777]
+transform = Transform3D(-0.3059007, 0.9520634, 0, -0.9520634, -0.3059007, 0, 0, 0, 1, 598.2222, 82.69368, 10)
+radius = 0.9
+height = 9.733305
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_144" type="CSGCylinder3D" parent="." unique_id=957696685]
+transform = Transform3D(-0.30118608, 0.9535654, 0, -0.9535654, -0.30118608, 0, 0, 0, 1, 607.49646, 79.73912, 10)
+radius = 0.9
+height = 9.733784
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_145" type="CSGCylinder3D" parent="." unique_id=133519883]
+transform = Transform3D(-0.2964412, 0.9550511, 0, -0.9550511, -0.2964412, 0, 0, 0, 1, 616.78577, 76.830475, 10)
+radius = 0.9
+height = 9.734235
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_146" type="CSGCylinder3D" parent="." unique_id=1523666534]
+transform = Transform3D(-0.29166436, 0.9565207, 0, -0.9565207, -0.29166436, 0, 0, 0, 1, 626.08923, 73.968185, 10)
+radius = 0.9
+height = 9.733572
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_147" type="CSGCylinder3D" parent="." unique_id=1892853992]
+transform = Transform3D(-0.28685606, 0.9579737, 0, -0.9579737, -0.28685606, 0, 0, 0, 1, 635.4069, 71.15259, 10)
+radius = 0.9
+height = 9.734036
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_148" type="CSGCylinder3D" parent="." unique_id=1545099838]
+transform = Transform3D(-0.28202188, 0.959408, 0, -0.959408, -0.28202188, 0, 0, 0, 1, 644.7384, 68.38397, 10)
+radius = 0.9
+height = 9.733163
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_149" type="CSGCylinder3D" parent="." unique_id=866177319]
+transform = Transform3D(-0.27716136, 0.9608234, 0, -0.9608234, -0.27716136, 0, 0, 0, 1, 654.08374, 65.66257, 10)
+radius = 0.9
+height = 9.733816
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_150" type="CSGCylinder3D" parent="." unique_id=272319752]
+transform = Transform3D(-0.27226186, 0.96222323, 0, -0.96222323, -0.27226186, 0, 0, 0, 1, 663.44305, 62.988564, 10)
+radius = 0.9
+height = 9.733928
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_151" type="CSGCylinder3D" parent="." unique_id=1814089743]
+transform = Transform3D(-0.267321, 0.9636075, 0, -0.9636075, -0.267321, 0, 0, 0, 1, 672.8158, 60.36248, 10)
+radius = 0.9
+height = 9.7335615
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_152" type="CSGCylinder3D" parent="." unique_id=734071888]
+transform = Transform3D(-0.26237142, 0.9649669, 0, -0.9649669, -0.26237142, 0, 0, 0, 1, 682.2018, 57.78459, 10)
+radius = 0.9
+height = 9.733511
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_153" type="CSGCylinder3D" parent="." unique_id=1902669947]
+transform = Transform3D(-0.25740623, 0.96630317, 0, -0.96630317, -0.25740623, 0, 0, 0, 1, 691.6008, 55.25495, 10)
+radius = 0.9
+height = 9.733568
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_154" type="CSGCylinder3D" parent="." unique_id=63168445]
+transform = Transform3D(-0.25240386, 0.9676219, 0, -0.9676219, -0.25240386, 0, 0, 0, 1, 701.0129, 52.773796, 10)
+radius = 0.9
+height = 9.733738
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_155" type="CSGCylinder3D" parent="." unique_id=746470955]
+transform = Transform3D(-0.24738085, 0.9689184, 0, -0.9689184, -0.24738085, 0, 0, 0, 1, 710.43744, 50.34149, 10)
+radius = 0.9
+height = 9.733062
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_156" type="CSGCylinder3D" parent="." unique_id=1063404134]
+transform = Transform3D(-0.24233007, 0.9701938, 0, -0.9701938, -0.24233007, 0, 0, 0, 1, 719.8745, 47.95822, 10)
+radius = 0.9
+height = 9.733728
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_157" type="CSGCylinder3D" parent="." unique_id=388085554]
+transform = Transform3D(-0.23725271, 0.97144794, 0, -0.97144794, -0.23725271, 0, 0, 0, 1, 729.32434, 45.62413, 10)
+radius = 0.9
+height = 9.733917
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_158" type="CSGCylinder3D" parent="." unique_id=715089176]
+transform = Transform3D(-0.23214698, 0.9726806, 0, -0.9726806, -0.23214698, 0, 0, 0, 1, 738.7864, 43.339558, 10)
+radius = 0.9
+height = 9.734131
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Seg_159" type="CSGCylinder3D" parent="." unique_id=1644707343]
+transform = Transform3D(-0.22701538, 0.9738912, 0, -0.9738912, -0.22701538, 0, 0, 0, 1, 748.26025, 41.104843, 10)
+radius = 0.9
+height = 9.733625
+material = SubResource("StandardMaterial3D_txnhk")
+
+[node name="CableRight_Hanger_4" type="CSGCylinder3D" parent="." unique_id=696923848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -700, 52.601234, 10)
+radius = 0.18
+height = 3.2024727
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_5" type="CSGCylinder3D" parent="." unique_id=1242728012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -686, 54.213417, 10)
+radius = 0.18
+height = 6.426834
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_6" type="CSGCylinder3D" parent="." unique_id=2037654676]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -672, 56.279648, 10)
+radius = 0.18
+height = 10.559299
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_7" type="CSGCylinder3D" parent="." unique_id=143520418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -658, 58.412025, 10)
+radius = 0.18
+height = 14.824051
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_8" type="CSGCylinder3D" parent="." unique_id=429834168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -644, 60.158485, 10)
+radius = 0.18
+height = 18.31697
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_9" type="CSGCylinder3D" parent="." unique_id=852005013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -630, 62.398285, 10)
+radius = 0.18
+height = 22.79657
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_10" type="CSGCylinder3D" parent="." unique_id=2026883791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -616, 64.69415, 10)
+radius = 0.18
+height = 27.388313
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_11" type="CSGCylinder3D" parent="." unique_id=1291578411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -602, 66.5773, 10)
+radius = 0.18
+height = 31.154594
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_12" type="CSGCylinder3D" parent="." unique_id=1206700844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -588, 68.981415, 10)
+radius = 0.18
+height = 35.962822
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_13" type="CSGCylinder3D" parent="." unique_id=665660676]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -574, 71.44472, 10)
+radius = 0.18
+height = 40.889427
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_14" type="CSGCylinder3D" parent="." unique_id=400942437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -560, 73.962524, 10)
+radius = 0.18
+height = 45.92504
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_15" type="CSGCylinder3D" parent="." unique_id=2048473581]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -546, 76.020355, 10)
+radius = 0.18
+height = 50.040718
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_16" type="CSGCylinder3D" parent="." unique_id=1229574235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -532, 78.64256, 10)
+radius = 0.18
+height = 55.285126
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_17" type="CSGCylinder3D" parent="." unique_id=1244434793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -518, 81.32004, 10)
+radius = 0.18
+height = 60.640076
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_18" type="CSGCylinder3D" parent="." unique_id=858133242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -504, 84.05179, 10)
+radius = 0.18
+height = 66.10358
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_19" type="CSGCylinder3D" parent="." unique_id=374012975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -490, 86.27617, 10)
+radius = 0.18
+height = 70.552345
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_20" type="CSGCylinder3D" parent="." unique_id=1768320844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -476, 89.10829, 10)
+radius = 0.18
+height = 76.21659
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_21" type="CSGCylinder3D" parent="." unique_id=1262525347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -462, 91.990456, 10)
+radius = 0.18
+height = 81.98091
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_22" type="CSGCylinder3D" parent="." unique_id=1880731640]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -448, 94.92788, 10)
+radius = 0.18
+height = 87.85576
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_23" type="CSGCylinder3D" parent="." unique_id=1921510943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -434, 97.90989, 10)
+radius = 0.18
+height = 93.81978
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_24" type="CSGCylinder3D" parent="." unique_id=1107168076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -420, 98.42226, 10)
+radius = 0.18
+height = 94.84451
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_25" type="CSGCylinder3D" parent="." unique_id=1223168875]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -406, 96.647125, 10)
+radius = 0.18
+height = 91.29425
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_26" type="CSGCylinder3D" parent="." unique_id=1244483546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -392, 94.50181, 10)
+radius = 0.18
+height = 87.00362
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_27" type="CSGCylinder3D" parent="." unique_id=749839841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -378, 92.4269, 10)
+radius = 0.18
+height = 82.853806
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_28" type="CSGCylinder3D" parent="." unique_id=533438500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -364, 90.82405, 10)
+radius = 0.18
+height = 79.6481
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_29" type="CSGCylinder3D" parent="." unique_id=804662384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -350, 88.88486, 10)
+radius = 0.18
+height = 75.769714
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_30" type="CSGCylinder3D" parent="." unique_id=1727099940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -336, 87.028305, 10)
+radius = 0.18
+height = 72.05662
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_31" type="CSGCylinder3D" parent="." unique_id=1241989033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -322, 85.594666, 10)
+radius = 0.18
+height = 69.18932
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_32" type="CSGCylinder3D" parent="." unique_id=1882133586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -308, 83.880066, 10)
+radius = 0.18
+height = 65.76014
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_33" type="CSGCylinder3D" parent="." unique_id=619432138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -294, 82.561295, 10)
+radius = 0.18
+height = 63.12258
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_34" type="CSGCylinder3D" parent="." unique_id=676441988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -280, 80.98927, 10)
+radius = 0.18
+height = 59.97854
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_35" type="CSGCylinder3D" parent="." unique_id=318215033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -266, 79.49358, 10)
+radius = 0.18
+height = 56.987167
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_36" type="CSGCylinder3D" parent="." unique_id=521937613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -252, 78.3601, 10)
+radius = 0.18
+height = 54.7202
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_37" type="CSGCylinder3D" parent="." unique_id=23731193]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -238, 77.010704, 10)
+radius = 0.18
+height = 52.021408
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_38" type="CSGCylinder3D" parent="." unique_id=1774178272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -224, 75.996506, 10)
+radius = 0.18
+height = 49.99301
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_39" type="CSGCylinder3D" parent="." unique_id=31696097]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -210, 74.79696, 10)
+radius = 0.18
+height = 47.593918
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_40" type="CSGCylinder3D" parent="." unique_id=875514090]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196, 73.90213, 10)
+radius = 0.18
+height = 45.804268
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_41" type="CSGCylinder3D" parent="." unique_id=870303479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -182, 72.85472, 10)
+radius = 0.18
+height = 43.709442
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_42" type="CSGCylinder3D" parent="." unique_id=1463109197]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -168, 72.080154, 10)
+radius = 0.18
+height = 42.160316
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_43" type="CSGCylinder3D" parent="." unique_id=1774943184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -154, 71.186386, 10)
+radius = 0.18
+height = 40.37278
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_44" type="CSGCylinder3D" parent="." unique_id=966969662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -140, 70.53348, 10)
+radius = 0.18
+height = 39.066956
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_45" type="CSGCylinder3D" parent="." unique_id=1025725244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126, 69.79463, 10)
+radius = 0.18
+height = 37.58927
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_46" type="CSGCylinder3D" parent="." unique_id=2109190637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112, 69.26452, 10)
+radius = 0.18
+height = 36.529037
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_47" type="CSGCylinder3D" parent="." unique_id=1710118726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 68.68167, 10)
+radius = 0.18
+height = 35.363342
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_48" type="CSGCylinder3D" parent="." unique_id=1675559607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -84, 68.275345, 10)
+radius = 0.18
+height = 34.550682
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_49" type="CSGCylinder3D" parent="." unique_id=1718099355]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 67.849335, 10)
+radius = 0.18
+height = 33.69867
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_50" type="CSGCylinder3D" parent="." unique_id=2114715398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 67.56751, 10)
+radius = 0.18
+height = 33.135025
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_51" type="CSGCylinder3D" parent="." unique_id=1039214906]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 67.29898, 10)
+radius = 0.18
+height = 32.59796
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_52" type="CSGCylinder3D" parent="." unique_id=812288815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 67.14217, 10)
+radius = 0.18
+height = 32.284348
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_53" type="CSGCylinder3D" parent="." unique_id=2017383683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 67.03151, 10)
+radius = 0.18
+height = 32.06301
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_54" type="CSGCylinder3D" parent="." unique_id=627111271]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 67, 10)
+radius = 0.18
+height = 32.000008
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_55" type="CSGCylinder3D" parent="." unique_id=641996725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 67.04737, 10)
+radius = 0.18
+height = 32.09474
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_56" type="CSGCylinder3D" parent="." unique_id=640339325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 67.14213, 10)
+radius = 0.18
+height = 32.284256
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_57" type="CSGCylinder3D" parent="." unique_id=1010352016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 67.346565, 10)
+radius = 0.18
+height = 32.69313
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_58" type="CSGCylinder3D" parent="." unique_id=479854582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 67.56742, 10)
+radius = 0.18
+height = 33.134842
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_59" type="CSGCylinder3D" parent="." unique_id=254948574]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 67.92858, 10)
+radius = 0.18
+height = 33.857162
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_60" type="CSGCylinder3D" parent="." unique_id=560513050]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 68.27521, 10)
+radius = 0.18
+height = 34.550415
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_61" type="CSGCylinder3D" parent="." unique_id=1127400830]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98, 68.79248, 10)
+radius = 0.18
+height = 35.58496
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_62" type="CSGCylinder3D" parent="." unique_id=478479483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112, 69.26434, 10)
+radius = 0.18
+height = 36.528687
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_63" type="CSGCylinder3D" parent="." unique_id=435920909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126, 69.93689, 10)
+radius = 0.18
+height = 37.87377
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_64" type="CSGCylinder3D" parent="." unique_id=1704765745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140, 70.6914, 10)
+radius = 0.18
+height = 39.382797
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_65" type="CSGCylinder3D" parent="." unique_id=1567846669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 154, 71.359886, 10)
+radius = 0.18
+height = 40.719772
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_66" type="CSGCylinder3D" parent="." unique_id=1216995922]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 168, 72.26776, 10)
+radius = 0.18
+height = 42.53553
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_67" type="CSGCylinder3D" parent="." unique_id=1023054620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 182, 73.05929, 10)
+radius = 0.18
+height = 44.118576
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_68" type="CSGCylinder3D" parent="." unique_id=217936573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 196, 74.119, 10)
+radius = 0.18
+height = 46.238007
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_69" type="CSGCylinder3D" parent="." unique_id=420327326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 210, 75.03232, 10)
+radius = 0.18
+height = 48.064644
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_70" type="CSGCylinder3D" parent="." unique_id=1616404273]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 224, 76.242134, 10)
+radius = 0.18
+height = 50.48427
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_71" type="CSGCylinder3D" parent="." unique_id=1147491254]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 238, 77.275955, 10)
+radius = 0.18
+height = 52.551918
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_72" type="CSGCylinder3D" parent="." unique_id=1099362384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 252, 78.63611, 10)
+radius = 0.18
+height = 55.272217
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_73" type="CSGCylinder3D" parent="." unique_id=1791226166]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 266, 79.78682, 10)
+radius = 0.18
+height = 57.57363
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_74" type="CSGCylinder3D" parent="." unique_id=2043706977]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 280, 81.29542, 10)
+radius = 0.18
+height = 60.590836
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_75" type="CSGCylinder3D" parent="." unique_id=362646673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 294, 82.88742, 10)
+radius = 0.18
+height = 63.77484
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_76" type="CSGCylinder3D" parent="." unique_id=1202167179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 308, 84.216064, 10)
+radius = 0.18
+height = 66.43213
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_77" type="CSGCylinder3D" parent="." unique_id=248805937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 322, 85.95026, 10)
+radius = 0.18
+height = 69.90052
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_78" type="CSGCylinder3D" parent="." unique_id=1070426529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 336, 87.39371, 10)
+radius = 0.18
+height = 72.78742
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_79" type="CSGCylinder3D" parent="." unique_id=1680855275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 350, 89.26759, 10)
+radius = 0.18
+height = 76.53519
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_80" type="CSGCylinder3D" parent="." unique_id=118475463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 364, 91.218254, 10)
+radius = 0.18
+height = 80.43651
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_81" type="CSGCylinder3D" parent="." unique_id=836665603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 378, 92.83461, 10)
+radius = 0.18
+height = 83.66922
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_82" type="CSGCylinder3D" parent="." unique_id=913320841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 392, 94.92469, 10)
+radius = 0.18
+height = 87.84938
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_83" type="CSGCylinder3D" parent="." unique_id=2087659900]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 406, 97.08843, 10)
+radius = 0.18
+height = 92.176865
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_84" type="CSGCylinder3D" parent="." unique_id=696603622]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 420, 98.873276, 10)
+radius = 0.18
+height = 95.74655
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_85" type="CSGCylinder3D" parent="." unique_id=169926060]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 434, 97.3134, 10)
+radius = 0.18
+height = 92.6268
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_86" type="CSGCylinder3D" parent="." unique_id=934773889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 448, 94.33676, 10)
+radius = 0.18
+height = 86.67352
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_87" type="CSGCylinder3D" parent="." unique_id=1333380565]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 462, 91.40995, 10)
+radius = 0.18
+height = 80.8199
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_88" type="CSGCylinder3D" parent="." unique_id=1440314029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 476, 88.53793, 10)
+radius = 0.18
+height = 75.075874
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_89" type="CSGCylinder3D" parent="." unique_id=1854153545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 490, 85.718285, 10)
+radius = 0.18
+height = 69.43657
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_90" type="CSGCylinder3D" parent="." unique_id=546264358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 504, 83.502495, 10)
+radius = 0.18
+height = 65.00499
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_91" type="CSGCylinder3D" parent="." unique_id=2055457822]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 518, 80.77838, 10)
+radius = 0.18
+height = 59.556763
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_92" type="CSGCylinder3D" parent="." unique_id=1959290759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 532, 78.1145, 10)
+radius = 0.18
+height = 54.22901
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_93" type="CSGCylinder3D" parent="." unique_id=1659630136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 546, 75.50268, 10)
+radius = 0.18
+height = 49.005356
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_94" type="CSGCylinder3D" parent="." unique_id=289168315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 560, 72.949905, 10)
+radius = 0.18
+height = 43.899803
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_95" type="CSGCylinder3D" parent="." unique_id=1031315371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 574, 70.94586, 10)
+radius = 0.18
+height = 39.89173
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_96" type="CSGCylinder3D" parent="." unique_id=1804077683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 588, 68.49725, 10)
+radius = 0.18
+height = 34.9945
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_97" type="CSGCylinder3D" parent="." unique_id=1689269745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 602, 66.10248, 10)
+radius = 0.18
+height = 30.204964
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_98" type="CSGCylinder3D" parent="." unique_id=1394817980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 616, 64.23233, 10)
+radius = 0.18
+height = 26.464668
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_99" type="CSGCylinder3D" parent="." unique_id=1143972185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 630, 61.94392, 10)
+radius = 0.18
+height = 21.88784
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_100" type="CSGCylinder3D" parent="." unique_id=2119157379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 644, 59.71927, 10)
+radius = 0.18
+height = 17.438538
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_101" type="CSGCylinder3D" parent="." unique_id=915031760]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 658, 57.98043, 10)
+radius = 0.18
+height = 13.960861
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_102" type="CSGCylinder3D" parent="." unique_id=1192563820]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 672, 55.86335, 10)
+radius = 0.18
+height = 9.726696
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_103" type="CSGCylinder3D" parent="." unique_id=1006197030]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 686, 53.804916, 10)
+radius = 0.18
+height = 5.609833
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="CableRight_Hanger_104" type="CSGCylinder3D" parent="." unique_id=1950593272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 700, 52.206066, 10)
+radius = 0.18
+height = 2.4121323
+material = SubResource("StandardMaterial3D_hrv1e")
+
+[node name="AnchorWest" type="CSGBox3D" parent="." unique_id=124062630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -756, 26, 0)
+size = Vector3(48, 28, 38)
+material = SubResource("StandardMaterial3D_7neke")
+
+[node name="AnchorEast" type="CSGBox3D" parent="." unique_id=1468365903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 753, 26, 0)
+size = Vector3(48, 28, 38)
+material = SubResource("StandardMaterial3D_o2yof")
