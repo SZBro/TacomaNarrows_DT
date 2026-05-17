@@ -43,14 +43,51 @@ extends Node3D
 	set(value):
 		_build_cables()
 
+var _base_position: Vector3    = Vector3.ZERO
+var _data_engine:   Node       = null
+var last_data:      Dictionary = {}
+
 # ── Entry Point ────────────────────────────────────────────
 func _ready():
 	_build_cables()
+	if not Engine.is_editor_hint():
+		_base_position = position
+		_data_engine   = get_node("/root/DataEngine")
+		_data_engine.register_section(self)
+		_add_selection_area()
+
+func _add_selection_area() -> void:
+	var area   := Area3D.new()
+	area.name   = "SelectionArea"
+	var col    := CollisionShape3D.new()
+	var box    := BoxShape3D.new()
+	var span:   float = tower_e_pos.x - tower_w_pos.x
+	var mid_x:  float = (tower_w_pos.x + tower_e_pos.x) * 0.5
+	var low_y:  float = tower_w_pos.y - main_span_sag
+	var hi_y:   float = tower_w_pos.y
+	box.size     = Vector3(span, hi_y - low_y + 10.0, cable_spacing_z + 10.0)
+	col.shape    = box
+	col.position = Vector3(mid_x, (low_y + hi_y) * 0.5, 0.0)
+	area.add_child(col)
+	add_child(area)
+
+func _exit_tree() -> void:
+	if _data_engine:
+		_data_engine.unregister_section(self)
+
+# Cables sit at x≈0 (midspan), so they receive peak mode-1 resonance.
+# Vertical follow at 60% of deck amplitude; slight lateral sway from wind.
+func receive_data(data: Dictionary) -> void:
+	last_data = data
+	var wind_dir_rad: float  = deg_to_rad(data.get("wind_direction", 270.0))
+	var wind_speed: float    = data.get("wind_speed", 0.0)
+	var lateral_sway: float  = sin(wind_dir_rad) * (wind_speed / 3.6) * 0.003
+	position = _base_position + Vector3(0.0, data.get("resonance", 0.0) * 0.15, lateral_sway)
 
 # ── Build ──────────────────────────────────────────────────
 func _build_cables():
-	print("BUILD CABLES CALLED")
 	for child in get_children():
+		remove_child(child)
 		child.free()
 
 	_build_main_cable("CableLeft",  -cable_spacing_z / 2.0)
@@ -179,10 +216,10 @@ func _sample_cable_y(curve: Curve3D, target_x: float) -> float:
 func _build_anchorages():
 	const ANCHOR_COLOR := Color(0.52, 0.53, 0.50)
 
-	var west_x := tower_w_pos.x - anchorage_distance
-	var east_x := tower_e_pos.x + anchorage_distance
+	var west_x: float       = tower_w_pos.x - anchorage_distance
+	var east_x: float       = tower_e_pos.x + anchorage_distance
 	# Block center y: top of block sits at anchor_y
-	var block_center_y := anchor_y - anchor_height * 0.5
+	var block_center_y: float = anchor_y - anchor_height * 0.5
 
 	_add_box("AnchorWest",
 		Vector3(anchor_depth, anchor_height, anchor_width),
