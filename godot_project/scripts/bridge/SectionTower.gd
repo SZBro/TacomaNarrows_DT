@@ -15,14 +15,55 @@ extends Node3D
 	set(value):
 		_build_tower()
 
+var _base_position:     Vector3    = Vector3.ZERO
+var _base_rotation_deg: Vector3    = Vector3.ZERO
+var _data_engine:       Node       = null
+var last_data:          Dictionary = {}
+
 # ── Entry Point ────────────────────────────────────────────
 func _ready():
 	_build_tower()
+	if not Engine.is_editor_hint():
+		_base_position     = position
+		_base_rotation_deg = rotation_degrees
+		_data_engine = get_node("/root/DataEngine")
+		_data_engine.register_section(self)
+		_add_selection_area()
+
+func _add_selection_area() -> void:
+	var area := Area3D.new()
+	area.name = "SelectionArea"
+	var col  := CollisionShape3D.new()
+	var box  := BoxShape3D.new()
+	box.size     = Vector3(leg_depth + 4.0, tower_height, leg_spacing + 6.0)
+	col.shape    = box
+	col.position = Vector3(0.0, tower_height * 0.5, 0.0)
+	area.add_child(col)
+	add_child(area)
+
+func _exit_tree() -> void:
+	if _data_engine:
+		_data_engine.unregister_section(self)
+
+# Towers respond to wind sway (rotation_degrees.z) and seismic jitter (position x/z).
+# Scale: wind × 0.004 → max ~0.3° lean at 67 km/h; seismic × 0.8 → visible shake.
+func receive_data(data: Dictionary) -> void:
+	last_data = data
+	var wind_speed: float    = data.get("wind_speed", 0.0)
+	var wind_dir_rad: float  = deg_to_rad(data.get("wind_direction", 270.0))
+	var seismic: float       = data.get("seismic_vibration", 0.0)
+	var t: float             = data.get("sim_time", 0.0)
+	var lateral_lean: float  = sin(wind_dir_rad) * (wind_speed / 3.6) * 0.003
+	var jitter_x: float      = sin(t * 13.7)        * seismic * 0.15
+	var jitter_z: float      = sin(t * 17.3 + 1.0)  * seismic * 0.15
+	position         = _base_position     + Vector3(jitter_x, 0.0, jitter_z)
+	rotation_degrees = _base_rotation_deg + Vector3(0.0, 0.0, lateral_lean)
 
 # ── Build ──────────────────────────────────────────────────
 func _build_tower():
 	for child in get_children():
-		child.free()					# ← free() not queue_free()
+		remove_child(child)
+		child.free()
 
 	var combiner = CSGCombiner3D.new()
 	combiner.name = "Geometry"

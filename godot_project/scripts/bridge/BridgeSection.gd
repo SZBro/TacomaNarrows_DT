@@ -11,9 +11,43 @@ extends Node3D
 	set(value):
 		_build_section()
 
+var _base_position:     Vector3    = Vector3.ZERO
+var _base_rotation_deg: Vector3    = Vector3.ZERO
+var _data_engine:       Node       = null
+var last_data:          Dictionary = {}
+
 # ── Entry Point ────────────────────────────────────────────
 func _ready():
 	_build_section()
+	if not Engine.is_editor_hint():
+		_base_position     = position
+		_base_rotation_deg = rotation_degrees
+		_data_engine = get_node("/root/DataEngine")
+		_data_engine.register_section(self)
+		_add_selection_area()
+
+func _exit_tree() -> void:
+	if _data_engine:
+		_data_engine.unregister_section(self)
+
+# Adds a thin Area3D so DebugOverlay can raycast-select this section.
+func _add_selection_area() -> void:
+	var area  := Area3D.new()
+	area.name  = "SelectionArea"
+	var col   := CollisionShape3D.new()
+	var box   := BoxShape3D.new()
+	box.size   = Vector3(deck_length, truss_depth + 2.0, deck_width)
+	col.shape  = box
+	area.add_child(col)
+	add_child(area)
+
+# Visual scales (1 Godot unit ≈ 1 m at bridge scale):
+#   resonance × 0.25 → calm ≈ 3 mm, storm ≈ 400 mm, resonance event ≈ 120 mm
+#   torsion   × 10   → calm ≈ 0.1°, storm ≈ 0.8°, resonance event ≈ 1.6°
+func receive_data(data: Dictionary) -> void:
+	last_data        = data
+	position         = _base_position     + Vector3(0.0, data.get("resonance", 0.0) * 0.25, 0.0)
+	rotation_degrees = _base_rotation_deg + Vector3(data.get("torsion", 0.0) * 10.0, 0.0, 0.0)
 
 # ── Build ──────────────────────────────────────────────────
 func _build_section():
