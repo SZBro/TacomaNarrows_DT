@@ -47,14 +47,32 @@ var _base_position: Vector3    = Vector3.ZERO
 var _data_engine:   Node       = null
 var last_data:      Dictionary = {}
 
+# ── Motion Lerp ────────────────────────────────────────────
+@export var motion_lerp_speed: float = 4.0
+
+var _target_pos:  Vector3 = Vector3.ZERO
+var _current_pos: Vector3 = Vector3.ZERO
+
+# ── Stress Shader ──────────────────────────────────────────
+@export var stress_lerp_speed: float = 3.0
+
+var _stress_materials: Array = []
+var _stress_target:    float = 0.0
+var _stress_current:   float = 0.0
+var _outline_mat:      ShaderMaterial = null
+
 # ── Entry Point ────────────────────────────────────────────
 func _ready():
 	_build_cables()
 	if not Engine.is_editor_hint():
 		_base_position = position
+		_current_pos   = position
+		_target_pos    = position
 		_data_engine   = get_node("/root/DataEngine")
 		_data_engine.register_section(self)
 		_add_selection_area()
+		_apply_stress_shader(self)
+		DataEngine.stress_overlay_changed.connect(_on_stress_overlay_changed)
 
 func _add_selection_area() -> void:
 	var area   := Area3D.new()
@@ -75,6 +93,43 @@ func _exit_tree() -> void:
 	if _data_engine:
 		_data_engine.unregister_section(self)
 
+func set_highlighted(on: bool) -> void:
+	if on and _outline_mat == null:
+		_outline_mat = ShaderMaterial.new()
+		_outline_mat.shader = load("res://shaders/selection_outline.gdshader")
+	for mat in _stress_materials:
+		(mat as ShaderMaterial).next_pass = _outline_mat if on else null
+
+func _on_stress_overlay_changed(enabled: bool) -> void:
+	if not enabled:
+		_stress_target  = 0.0
+		_stress_current = 0.0
+		for mat in _stress_materials:
+			(mat as ShaderMaterial).set_shader_parameter("stress_level", 0.0)
+
+func _process(delta: float) -> void:
+	if Engine.is_editor_hint():
+		return
+	_current_pos = _current_pos.lerp(_target_pos, delta * motion_lerp_speed)
+	position = _current_pos
+	if _stress_materials.is_empty():
+		return
+	_stress_current = lerpf(_stress_current, _stress_target, delta * stress_lerp_speed)
+	for mat in _stress_materials:
+		(mat as ShaderMaterial).set_shader_parameter("stress_level", _stress_current)
+
+func _apply_stress_shader(node: Node) -> void:
+	for child in node.get_children():
+		if child is CSGBox3D or child is CSGCylinder3D:
+			if child.material == null:
+				child.material = StandardMaterial3D.new()
+			var smat := ShaderMaterial.new()
+			smat.shader = load("res://shaders/stress_overlay.gdshader")
+			child.material.next_pass = smat
+			_stress_materials.append(smat)
+		if child.get_child_count() > 0:
+			_apply_stress_shader(child)
+
 # Cables sit at x≈0 (midspan), so they receive peak mode-1 resonance.
 # Vertical follow at 60% of deck amplitude; slight lateral sway from wind.
 func receive_data(data: Dictionary) -> void:
@@ -82,7 +137,10 @@ func receive_data(data: Dictionary) -> void:
 	var wind_dir_rad: float  = deg_to_rad(data.get("wind_direction", 270.0))
 	var wind_speed: float    = data.get("wind_speed", 0.0)
 	var lateral_sway: float  = sin(wind_dir_rad) * (wind_speed / 3.6) * 0.003
-	position = _base_position + Vector3(0.0, data.get("resonance", 0.0) * 0.15, lateral_sway)
+	_target_pos = _base_position + Vector3(0.0, data.get("resonance", 0.0) * 0.15, lateral_sway)
+
+	if DataEngine.stress_overlay_enabled:
+		_stress_target = DataEngine.stress_continuous(data)
 
 # ── Build ──────────────────────────────────────────────────
 func _build_cables():

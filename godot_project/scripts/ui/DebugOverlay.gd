@@ -3,23 +3,6 @@ extends CanvasLayer
 ## Connects to DataEngine.tick_completed; updated every simulation tick.
 ## Click a BridgeSection in the viewport to select it.
 
-# ── Section State ─────────────────────────────────────────────────────────────
-enum SectionState { NORMAL, WARNING, CRITICAL, FAILURE }
-
-const _STATE_COLORS: Dictionary = {
-	SectionState.NORMAL:   Color(0.20, 0.88, 0.20),
-	SectionState.WARNING:  Color(1.00, 0.82, 0.00),
-	SectionState.CRITICAL: Color(1.00, 0.28, 0.08),
-	SectionState.FAILURE:  Color(0.50, 0.00, 0.00),
-}
-
-const _STATE_NAMES: Dictionary = {
-	SectionState.NORMAL:   "NORMAL",
-	SectionState.WARNING:  "WARNING",
-	SectionState.CRITICAL: "CRITICAL",
-	SectionState.FAILURE:  "FAILURE",
-}
-
 # ── UI Node References ────────────────────────────────────────────────────────
 var _panel:       PanelContainer
 var _lbl_section: Label
@@ -34,18 +17,22 @@ var _val: Dictionary = {}
 var _selected: Node = null
 
 # ── Lifecycle ─────────────────────────────────────────────────────────────────
+const TOP_BAR_HEIGHT: int = 36
+const PANEL_OFFSET:   int = 8
+
 func _ready() -> void:
 	layer = 10
 	_build_ui()
 	get_node("/root/DataEngine").tick_completed.connect(_on_tick)
 	get_node("/root/SelectionManager").section_selected.connect(_on_section_selected)
-	_show_empty()
+	get_node("/root/SelectionManager").section_deselected.connect(_on_section_deselected)
+	_panel.visible = false
 
 # ── UI Construction ───────────────────────────────────────────────────────────
 func _build_ui() -> void:
 	_panel = PanelContainer.new()
 	_panel.name = "Panel"
-	_panel.position = Vector2(12, 12)
+	_panel.position = Vector2(12, TOP_BAR_HEIGHT + PANEL_OFFSET)
 	_panel.custom_minimum_size = Vector2(252, 0)
 
 	var bg := StyleBoxFlat.new()
@@ -146,23 +133,19 @@ func _sep() -> HSeparator:
 	s.add_theme_stylebox_override("separator", style)
 	return s
 
-# ── Input — block panel clicks from reaching SelectionManager ─────────────────
-func _input(event: InputEvent) -> void:
-	if not (event is InputEventMouseButton
-			and event.pressed
-			and event.button_index == MOUSE_BUTTON_LEFT):
-		return
-	if _panel != null and _panel.get_global_rect().has_point(event.position):
-		get_viewport().set_input_as_handled()
-
 func _on_section_selected(section: Node) -> void:
 	_selected = section
+	_panel.visible = true
+
+func _on_section_deselected() -> void:
+	_selected = null
+	_panel.visible = false
 
 # ── Tick Handler ──────────────────────────────────────────────────────────────
 func _on_tick(_global: Dictionary) -> void:
 	if _selected == null or not is_instance_valid(_selected):
 		_selected = null
-		_show_empty()
+		_panel.visible = false
 		return
 	if not "last_data" in _selected or (_selected.last_data as Dictionary).is_empty():
 		return
@@ -181,9 +164,9 @@ func _show_data(data: Dictionary) -> void:
 	_lbl_hint.visible = false
 	_grid.visible     = true
 
-	var state           := _state_for(data)
-	_lbl_state.text     = _STATE_NAMES[state]
-	_lbl_state.modulate = _STATE_COLORS[state]
+	var state           := DataEngine.state_for(data)
+	_lbl_state.text     = DataEngine.STATE_NAMES[state]
+	_lbl_state.modulate = DataEngine.STATE_COLORS[state]
 
 	_set_val("wind_speed",    "%.1f"  % data.get("wind_speed",    0.0))
 	_set_val("temperature",   "%.1f"  % data.get("temperature",   0.0))
@@ -201,23 +184,3 @@ func _on_reset_camera() -> void:
 	if cam and cam.has_method("reset_view"):
 		cam.reset_view()
 
-# ── State Thresholds ──────────────────────────────────────────────────────────
-func _state_for(data: Dictionary) -> SectionState:
-	var wind: float = data.get("wind_speed", 0.0)
-	var res:  float = absf(data.get("resonance", 0.0))
-	var tors: float = absf(data.get("torsion",   0.0))
-	
-	# Thresholds calibrated against raw BridgeDataModel output ranges:
-	#   CALM:      wind 3-7,  res 0-0.013, tors 0-0.018
-	#   MODERATE:  wind 17-33, res 0-0.082, tors 0-0.025
-	#   STORM:     wind 35-75, res 0-1.65,  tors 0-0.094
-	#   RESONANCE: wind 62-72, res 0-0.49,  tors 0-0.148
-	#   EARTHQUAKE:wind 7-13,  res 0-0.027, tors 0-0.020
-	
-	if wind > 65.0 or res > 1.20 or tors > 0.12:
-		return SectionState.FAILURE
-	if wind > 50.0 or res > 0.40 or tors > 0.06:
-		return SectionState.CRITICAL
-	if wind > 30.0 or res > 0.04 or tors > 0.02:
-		return SectionState.WARNING
-	return SectionState.NORMAL

@@ -11,10 +11,28 @@ extends Node3D
 	set(value):
 		_build_section()
 
+@export var reverse_traffic: bool = false
+
 var _base_position:     Vector3    = Vector3.ZERO
 var _base_rotation_deg: Vector3    = Vector3.ZERO
 var _data_engine:       Node       = null
 var last_data:          Dictionary = {}
+
+# ── Motion Lerp ────────────────────────────────────────────
+@export var motion_lerp_speed: float = 4.0
+
+var _target_pos:  Vector3 = Vector3.ZERO
+var _target_rot:  Vector3 = Vector3.ZERO
+var _current_pos: Vector3 = Vector3.ZERO
+var _current_rot: Vector3 = Vector3.ZERO
+
+# ── Stress Shader ──────────────────────────────────────────
+@export var stress_lerp_speed: float = 3.0
+
+var _stress_materials: Array = []
+var _stress_target:    float = 0.0
+var _stress_current:   float = 0.0
+var _outline_mat:      ShaderMaterial = null
 
 # ── Entry Point ────────────────────────────────────────────
 func _ready():
@@ -22,13 +40,46 @@ func _ready():
 	if not Engine.is_editor_hint():
 		_base_position     = position
 		_base_rotation_deg = rotation_degrees
+		_current_pos = position
+		_current_rot = rotation_degrees
+		_target_pos  = position
+		_target_rot  = rotation_degrees
 		_data_engine = get_node("/root/DataEngine")
 		_data_engine.register_section(self)
 		_add_selection_area()
+		_apply_stress_shader(self)
+		DataEngine.stress_overlay_changed.connect(_on_stress_overlay_changed)
 
 func _exit_tree() -> void:
 	if _data_engine:
 		_data_engine.unregister_section(self)
+
+func set_highlighted(on: bool) -> void:
+	if on and _outline_mat == null:
+		_outline_mat = ShaderMaterial.new()
+		_outline_mat.shader = load("res://shaders/selection_outline.gdshader")
+	for mat in _stress_materials:
+		(mat as ShaderMaterial).next_pass = _outline_mat if on else null
+
+func _on_stress_overlay_changed(enabled: bool) -> void:
+	if not enabled:
+		_stress_target  = 0.0
+		_stress_current = 0.0
+		for mat in _stress_materials:
+			(mat as ShaderMaterial).set_shader_parameter("stress_level", 0.0)
+
+func _process(delta: float) -> void:
+	if Engine.is_editor_hint():
+		return
+	_current_pos = _current_pos.lerp(_target_pos, delta * motion_lerp_speed)
+	_current_rot = _current_rot.lerp(_target_rot, delta * motion_lerp_speed)
+	position         = _current_pos
+	rotation_degrees = _current_rot
+	if _stress_materials.is_empty():
+		return
+	_stress_current = lerpf(_stress_current, _stress_target, delta * stress_lerp_speed)
+	for mat in _stress_materials:
+		(mat as ShaderMaterial).set_shader_parameter("stress_level", _stress_current)
 
 # Adds a thin Area3D so DebugOverlay can raycast-select this section.
 func _add_selection_area() -> void:
@@ -45,14 +96,31 @@ func _add_selection_area() -> void:
 #   resonance × 0.25 → calm ≈ 3 mm, storm ≈ 400 mm, resonance event ≈ 120 mm
 #   torsion   × 10   → calm ≈ 0.1°, storm ≈ 0.8°, resonance event ≈ 1.6°
 func receive_data(data: Dictionary) -> void:
-	last_data        = data
-	position         = _base_position     + Vector3(0.0, data.get("resonance", 0.0) * 0.25, 0.0)
-	rotation_degrees = _base_rotation_deg + Vector3(data.get("torsion", 0.0) * 10.0, 0.0, 0.0)
+	last_data   = data
+	_target_pos = _base_position     + Vector3(0.0, data.get("resonance", 0.0) * 0.25, 0.0)
+	_target_rot = _base_rotation_deg + Vector3(data.get("torsion", 0.0) * 10.0, 0.0, 0.0)
+
+	if DataEngine.stress_overlay_enabled:
+		_stress_target = DataEngine.stress_continuous(data)
+
+# ── Stress Shader Helpers ──────────────────────────────────
+func _apply_stress_shader(node: Node) -> void:
+	for child in node.get_children():
+		if child is CSGBox3D or child is CSGCylinder3D:
+			if child.material == null:
+				child.material = StandardMaterial3D.new()
+			var smat := ShaderMaterial.new()
+			smat.shader = load("res://shaders/stress_overlay.gdshader")
+			child.material.next_pass = smat
+			_stress_materials.append(smat)
+		if child.get_child_count() > 0:
+			_apply_stress_shader(child)
 
 # ── Build ──────────────────────────────────────────────────
 func _build_section():
 	for child in get_children():
-		child.queue_free()
+		remove_child(child)
+		child.free()
 
 	var combiner = CSGCombiner3D.new()
 	combiner.name = "Geometry"

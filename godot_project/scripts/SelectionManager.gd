@@ -5,6 +5,7 @@ extends Node
 ## All bridge components register an Area3D so this raycast can find them.
 
 signal section_selected(section: Node)
+signal section_deselected()
 
 var selected: Node = null
 
@@ -29,6 +30,9 @@ func _try_select(screen_pos: Vector2) -> void:
 	query.collide_with_bodies = false
 	var result := space.intersect_ray(query)
 	if result.is_empty():
+		if selected != null:
+			selected = null
+			section_deselected.emit()
 		return
 	var parent: Node = result["collider"].get_parent()
 	if parent.has_method("receive_data"):
