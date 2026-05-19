@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://dn3dfxxihdwc3"]
+
+[ext_resource type="Script" uid="uid://ckir3ecihgudv" path="res://scripts/bridge/SectionTower2.gd" id="1_tower2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4aj30"]
+albedo_color = Color(0.82, 0.82, 0.78, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jr60r"]
+albedo_color = Color(0.82, 0.82, 0.78, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ntk0t"]
+albedo_color = Color(0.72, 0.72, 0.68, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdc61"]
+albedo_color = Color(0.79, 0.79, 0.75, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gvelh"]
+albedo_color = Color(0.78, 0.78, 0.74, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkinr"]
+albedo_color = Color(0.73, 0.73, 0.69, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_335kp"]
+albedo_color = Color(0.73, 0.73, 0.69, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bno5g"]
+albedo_color = Color(0.78, 0.78, 0.74, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0q2ng"]
+albedo_color = Color(0.8, 0.8, 0.76, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ep36r"]
+albedo_color = Color(0.8, 0.8, 0.76, 1)
+
+[node name="SectionTower2" type="Node3D" unique_id=1990809040]
+script = ExtResource("1_tower2")
+leg_spacing = 30.0
+leg_width = 9.0
+leg_depth = 7.0
+
+[node name="Geometry" type="CSGCombiner3D" parent="." unique_id=892118851]
+
+[node name="LegLeft" type="CSGBox3D" parent="Geometry" unique_id=1625749221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 74, -15)
+size = Vector3(7, 148, 9)
+material = SubResource("StandardMaterial3D_4aj30")
+
+[node name="LegRight" type="CSGBox3D" parent="Geometry" unique_id=504541774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 74, 15)
+size = Vector3(7, 148, 9)
+material = SubResource("StandardMaterial3D_jr60r")
+
+[node name="Pedestal" type="CSGBox3D" parent="Geometry" unique_id=1303680008]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8, 0)
+size = Vector3(11, 8, 39)
+material = SubResource("StandardMaterial3D_ntk0t")
+
+[node name="DeckStrut" type="CSGBox3D" parent="Geometry" unique_id=131596739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 56, 0)
+size = Vector3(5.95, 3, 21)
+material = SubResource("StandardMaterial3D_cdc61")
+
+[node name="LowerPortal" type="CSGBox3D" parent="Geometry" unique_id=81291707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 88.8, 0)
+size = Vector3(7, 6, 21)
+material = SubResource("StandardMaterial3D_gvelh")
+
+[node name="XBrace_A" type="CSGBox3D" parent="Geometry" unique_id=1188349350]
+transform = Transform3D(1, 0, 0, 0, 0.4541201, -0.8909405, 0, 0.8909405, 0.4541201, 0, 109.4, 0)
+size = Vector3(3, 3, 46.24327)
+material = SubResource("StandardMaterial3D_wkinr")
+
+[node name="XBrace_B" type="CSGBox3D" parent="Geometry" unique_id=318436154]
+transform = Transform3D(1, 0, 0, 0, 0.4541201, 0.8909405, 0, -0.8909405, 0.4541201, 0, 109.4, 0)
+size = Vector3(3, 3, 46.24327)
+material = SubResource("StandardMaterial3D_335kp")
+
+[node name="UpperPortal" type="CSGBox3D" parent="Geometry" unique_id=1387024706]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 130, 0)
+size = Vector3(7, 7, 21)
+material = SubResource("StandardMaterial3D_bno5g")
+
+[node name="Saddle_0" type="CSGBox3D" parent="Geometry" unique_id=967986480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 149, -15)
+size = Vector3(8, 5, 11)
+material = SubResource("StandardMaterial3D_0q2ng")
+
+[node name="Saddle_1" type="CSGBox3D" parent="Geometry" unique_id=1932288055]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 149, 15)
+size = Vector3(8, 5, 11)
+material = SubResource("StandardMaterial3D_ep36r")

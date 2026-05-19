@@ -125,6 +125,16 @@ func generate_spatial(
 		"x_norm":       x_norm,
 	}
 
+# ── Reversed spatial — mirrors position around midspan for opposite-direction traffic ──
+func generate_spatial_reversed(
+		world_pos:   Vector3,
+		global_data: Dictionary,
+		params:      Dictionary,
+		sim_time:    float
+) -> Dictionary:
+	var mirrored := Vector3(2.0 * MIDSPAN_X - world_pos.x, world_pos.y, world_pos.z)
+	return generate_spatial(mirrored, global_data, params, sim_time)
+
 # ── Dynamic Amplification Factor ──────────────────────────────────────────────
 ## Single-DOF harmonic excitation: DAF = 1 / sqrt((1−r²)² + (2ζr)²)
 func _daf(f_drive: float, f_natural: float, zeta: float) -> float:

@@ -3,6 +3,64 @@ extends Node
 ## Autoload singleton: manages timing, section registry, scenario state, and tick dispatch.
 ## All physics/math is delegated to BridgeDataModel.
 
+# ── Section Health State ──────────────────────────────────────────────────────
+# Thresholds calibrated against raw BridgeDataModel output ranges:
+#   CALM:      wind 3-7,  res 0-0.013, tors 0-0.018
+#   MODERATE:  wind 17-33, res 0-0.082, tors 0-0.025
+#   STORM:     wind 35-75, res 0-1.65,  tors 0-0.094
+#   RESONANCE: wind 62-72, res 0-0.49,  tors 0-0.148
+#   EARTHQUAKE:wind 7-13,  res 0-0.027, tors 0-0.020
+enum SectionState { NORMAL, WARNING, CRITICAL, FAILURE }
+
+const STATE_COLORS: Dictionary = {
+	SectionState.NORMAL:   Color(0.20, 0.88, 0.20),
+	SectionState.WARNING:  Color(1.00, 0.82, 0.00),
+	SectionState.CRITICAL: Color(1.00, 0.28, 0.08),
+	SectionState.FAILURE:  Color(0.50, 0.00, 0.00),
+}
+
+const STATE_NAMES: Dictionary = {
+	SectionState.NORMAL:   "NORMAL",
+	SectionState.WARNING:  "WARNING",
+	SectionState.CRITICAL: "CRITICAL",
+	SectionState.FAILURE:  "FAILURE",
+}
+
+func state_for(data: Dictionary) -> SectionState:
+	var wind: float = data.get("wind_speed", 0.0)
+	var res:  float = absf(data.get("resonance", 0.0))
+	var tors: float = absf(data.get("torsion",   0.0))
+	if wind > 65.0 or res > 1.20 or tors > 0.12:
+		return SectionState.FAILURE
+	if wind > 50.0 or res > 0.40 or tors > 0.06:
+		return SectionState.CRITICAL
+	if wind > 30.0 or res > 0.04 or tors > 0.02:
+		return SectionState.WARNING
+	return SectionState.NORMAL
+
+func state_to_stress(state: SectionState) -> float:
+	match state:
+		SectionState.WARNING:  return 0.33
+		SectionState.CRITICAL: return 0.66
+		SectionState.FAILURE:  return 1.00
+		_:                     return 0.00
+
+# Continuous 0–1 stress from raw sensor data — use this for smooth shader visuals.
+# Uses WARNING thresholds as the midpoint so typical conditions produce visible color.
+func stress_continuous(data: Dictionary) -> float:
+	var wind: float = clampf(data.get("wind_speed", 0.0) / 30.0, 0.0, 1.0)
+	var res:  float = clampf(absf(data.get("resonance", 0.0)) / 0.04, 0.0, 1.0)
+	var tors: float = clampf(absf(data.get("torsion",   0.0)) / 0.02, 0.0, 1.0)
+	return clampf(res * 0.50 + wind * 0.30 + tors * 0.20, 0.0, 1.0)
+
+# ── Stress Overlay Toggle ─────────────────────────────────────────────────────
+var stress_overlay_enabled: bool = false
+signal stress_overlay_changed(enabled: bool)
+
+func set_stress_overlay(enabled: bool) -> void:
+	stress_overlay_enabled = enabled
+	stress_overlay_changed.emit(enabled)
+
 # ── Scenarios ─────────────────────────────────────────────────────────────────
 enum Scenario { CALM, MODERATE_WIND, STORM, RESONANCE_EVENT, EARTHQUAKE }
 
@@ -42,7 +100,7 @@ var sim_state: SimState = SimState.PAUSED
 var _sim_time:   float = 0.0
 var _tick:       int   = 0
 var _tick_accum: float = 0.0
-var tick_rate:   float = 20.0
+var tick_rate:   float = 1.0
 
 var current_scenario: Scenario = Scenario.CALM
 
@@ -132,19 +190,52 @@ func _fire_tick() -> void:
 	var global_data: Dictionary = _model.generate_global(params, _sim_time, is_quake)
 	global_data["sim_time"] = _sim_time
 	global_data["tick"]     = _tick
+	_apply_multipliers(global_data)
 
 	for i: int in range(_sections.size() - 1, -1, -1):
 		var section: Node = _sections[i]
 		if not is_instance_valid(section):
 			_sections.remove_at(i)
 			continue
-		var pos: Vector3    = section.global_position if section is Node3D else Vector3.ZERO
+		var pos: Vector3        = section.global_position if section is Node3D else Vector3.ZERO
 		var payload: Dictionary = global_data.duplicate()
-		payload.merge(_model.generate_spatial(pos, global_data, params, _sim_time))
+		var spatial: Dictionary
+		if section.get("reverse_traffic"):
+			spatial = _model.generate_spatial_reversed(pos, global_data, params, _sim_time)
+		else:
+			spatial = _model.generate_spatial(pos, global_data, params, _sim_time)
+		_apply_multipliers(spatial)
+		payload.merge(spatial)
 		if section.has_method("receive_data"):
 			section.receive_data(payload)
 
-	tick_completed.emit(global_data)
+	# Build signal payload: global + midspan spatial for the stream panel display.
+	var signal_data: Dictionary = global_data.duplicate()
+	var midspan: Dictionary = _model.generate_spatial(Vector3.ZERO, global_data, params, _sim_time)
+	_apply_multipliers(midspan)
+	signal_data.merge(midspan)
+	tick_completed.emit(signal_data)
+
+# ── Channel Multipliers ────────────────────────────────────────────────────────
+# Each entry scales the named key in the tick data. Default (absent) = 1.0.
+var _multipliers: Dictionary = {}
+signal multiplier_changed(key: String, value: float)
+
+func set_multiplier(key: String, value: float) -> void:
+	_multipliers[key] = value
+	multiplier_changed.emit(key, value)
+
+func reset_multiplier(key: String) -> void:
+	_multipliers.erase(key)
+	multiplier_changed.emit(key, 1.0)
+
+func get_multiplier(key: String) -> float:
+	return _multipliers.get(key, 1.0)
+
+func _apply_multipliers(data: Dictionary) -> void:
+	for key in _multipliers:
+		if data.has(key):
+			data[key] = data[key] * _multipliers[key]
 
 # ── Accessors ─────────────────────────────────────────────────────────────────
 func get_section_count() -> int: return _sections.size()
