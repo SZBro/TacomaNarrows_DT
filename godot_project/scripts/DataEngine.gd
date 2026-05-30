@@ -105,7 +105,6 @@ var tick_rate:   float = 1.0
 var current_scenario: Scenario = Scenario.CALM
 
 var _sections: Array[Node] = []
-var _model:    BridgeDataModel
 
 # ── Signals ───────────────────────────────────────────────────────────────────
 signal tick_completed(global_data: Dictionary)
@@ -114,7 +113,6 @@ signal scenario_changed(new_scenario: Scenario)
 
 # ── Lifecycle ─────────────────────────────────────────────────────────────────
 func _ready() -> void:
-	_model = BridgeDataModel.new()
 	set_process(true)
 	load_scenario(Scenario.CALM)
 	play()
@@ -187,7 +185,10 @@ func _fire_tick() -> void:
 
 	var params:      Dictionary = SCENARIO_PARAMS[current_scenario]
 	var is_quake:    bool       = current_scenario == Scenario.EARTHQUAKE
-	var global_data: Dictionary = _model.generate_global(params, _sim_time, is_quake)
+
+	# BridgeDataModel → SyncLayer (validate, buffer, anomaly-detect, tag provenance).
+	var global_data: Dictionary = SyncLayer.process_global(params, _sim_time, is_quake, _tick)
+	# Preserve legacy keys used by existing section scripts.
 	global_data["sim_time"] = _sim_time
 	global_data["tick"]     = _tick
 	_apply_multipliers(global_data)
@@ -197,21 +198,20 @@ func _fire_tick() -> void:
 		if not is_instance_valid(section):
 			_sections.remove_at(i)
 			continue
-		var pos: Vector3        = section.global_position if section is Node3D else Vector3.ZERO
-		var payload: Dictionary = global_data.duplicate()
-		var spatial: Dictionary
-		if section.get("reverse_traffic"):
-			spatial = _model.generate_spatial_reversed(pos, global_data, params, _sim_time)
-		else:
-			spatial = _model.generate_spatial(pos, global_data, params, _sim_time)
+		var pos:      Vector3    = section.global_position if section is Node3D else Vector3.ZERO
+		var reversed: bool       = section.get("reverse_traffic") == true
+		var payload:  Dictionary = global_data.duplicate()
+		var spatial:  Dictionary = SyncLayer.process_spatial(
+				section.name, pos, global_data, params, _sim_time, _tick, reversed)
 		_apply_multipliers(spatial)
 		payload.merge(spatial)
 		if section.has_method("receive_data"):
 			section.receive_data(payload)
 
-	# Build signal payload: global + midspan spatial for the stream panel display.
+	# Signal payload: global + midspan for the stream panel / debug overlay.
 	var signal_data: Dictionary = global_data.duplicate()
-	var midspan: Dictionary = _model.generate_spatial(Vector3.ZERO, global_data, params, _sim_time)
+	var midspan:     Dictionary = SyncLayer.process_spatial(
+			"__midspan__", Vector3.ZERO, global_data, params, _sim_time, _tick, false)
 	_apply_multipliers(midspan)
 	signal_data.merge(midspan)
 	tick_completed.emit(signal_data)

@@ -23,6 +23,7 @@ config/icon="res://icon.svg"
 
 DataEngine="*res://scripts/DataEngine.gd"
 SelectionManager="*res://scripts/SelectionManager.gd"
+SyncLayer="*res://scripts/sync/SyncLayer.gd"
 
 [display]
 
@@ -33,3 +34,7 @@ window/size/mode=3
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/zylann.hterrain/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false

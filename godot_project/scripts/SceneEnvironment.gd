@@ -11,15 +11,15 @@ func _ready() -> void:
 func _add_sun() -> void:
 	var sun := DirectionalLight3D.new()
 	sun.name = "Sun"
-	sun.rotation_degrees = Vector3(-50, 30, 0)
-	sun.light_energy = 1.2
+	sun.rotation_degrees = Vector3(-72, 45, 0)
+	sun.light_energy = 0.75
 	sun.shadow_enabled = true
 	add_child(sun)
 
 func _add_ground() -> void:
-	# One large flat plane covering everything — land color shows where water doesn't cover it.
+	# Large flat plane — land color shows at the edges beyond the water.
 	var mesh := PlaneMesh.new()
-	mesh.size = Vector2(6000.0, 3000.0)
+	mesh.size = Vector2(8000.0, 8000.0)
 	mesh.subdivide_width  = 1
 	mesh.subdivide_depth  = 1
 
@@ -27,16 +27,16 @@ func _add_ground() -> void:
 	mat.albedo_color = Color(0.38, 0.40, 0.32)  # muted olive-earth
 
 	var ground := MeshInstance3D.new()
-	ground.name      = "Ground"
-	ground.mesh      = mesh
+	ground.name             = "Ground"
+	ground.mesh             = mesh
 	ground.material_override = mat
-	ground.position  = Vector3(0.0, -6.0, 0.0)
+	ground.position         = Vector3(0.0, -6.0, 0.0)
 	add_child(ground)
 
 func _add_water() -> void:
-	# Water plane covering the strait between the two anchorages (x ≈ -756 to +753).
+	# Water plane large enough that the horizon edge is never visible.
 	var mesh := PlaneMesh.new()
-	mesh.size = Vector2(1600.0, 2500.0)
+	mesh.size = Vector2(3000.0, 3100.0)
 	mesh.subdivide_width  = 120
 	mesh.subdivide_depth  = 120
 
@@ -47,7 +47,7 @@ func _add_water() -> void:
 	water.name             = "Water"
 	water.mesh             = mesh
 	water.material_override = mat
-	water.position         = Vector3(-1.5, 0.0, 0.0)
+	water.position         = Vector3(0.0, 0.0, 0.0)
 	add_child(water)
 
 func _add_sky() -> void:
