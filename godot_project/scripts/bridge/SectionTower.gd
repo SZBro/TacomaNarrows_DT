@@ -49,8 +49,20 @@ func _ready():
 		_data_engine = get_node("/root/DataEngine")
 		_data_engine.register_section(self)
 		_add_selection_area()
+		_add_leg_collision()
 		_apply_stress_shader(self)
 		DataEngine.stress_overlay_changed.connect(_on_stress_overlay_changed)
+
+func _add_leg_collision() -> void:
+	for side in [-1, 1]:
+		var sb  := StaticBody3D.new()
+		var col := CollisionShape3D.new()
+		var box := BoxShape3D.new()
+		box.size     = Vector3(leg_depth, tower_height, leg_width)
+		col.shape    = box
+		col.position = Vector3(0.0, tower_height * 0.5, side * leg_spacing * 0.5)
+		sb.add_child(col)
+		add_child(sb)
 
 func _add_selection_area() -> void:
 	var area := Area3D.new()

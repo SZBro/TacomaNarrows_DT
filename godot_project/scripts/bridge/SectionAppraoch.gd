@@ -23,6 +23,18 @@ func _ready():
 		_data_engine   = get_node("/root/DataEngine")
 		_data_engine.register_section(self)
 		_add_selection_area()
+		_add_deck_collision()
+
+func _add_deck_collision() -> void:
+	var sb  := StaticBody3D.new()
+	sb.name  = "DeckCollision"
+	var col := CollisionShape3D.new()
+	var box := BoxShape3D.new()
+	box.size     = Vector3(approach_length, deck_thickness, deck_width)
+	col.shape    = box
+	col.position = Vector3(0.0, 0.0, 0.0)
+	sb.add_child(col)
+	add_child(sb)
 
 func _add_selection_area() -> void:
 	var area := Area3D.new()
