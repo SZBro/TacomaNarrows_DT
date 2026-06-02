@@ -49,14 +49,14 @@ func _ready() -> void:
 		terrain.set_collision_enabled(true)
 
 # ── Camera switching ──────────────────────────────────────────────────────────
-const _SPAWN_X: float = -700.0
+const _SPAWN_X: float = -700.0  # Tacoma / SE end of bridge
 const _SPAWN_Z: float =  0.0
-const _SPAWN_FACE_EAST: float = -PI * 0.5  # rotation.y so W key moves toward +X
+const _SPAWN_FACE_NW: float = -PI * 0.5  # rotation.y so player faces +X = Gig Harbor / NW
 
 func _activate_walk() -> void:
 	var surface_y := _surface_y_at(_SPAWN_X, _SPAWN_Z)
 	var spawn     := Vector3(_SPAWN_X, surface_y + 0.1, _SPAWN_Z)
-	_person_cam.call("activate", spawn, _SPAWN_FACE_EAST, 0.0)
+	_person_cam.call("activate", spawn, _SPAWN_FACE_NW, 0.0)
 
 func _surface_y_at(x: float, z: float) -> float:
 	var space := get_world_3d().direct_space_state

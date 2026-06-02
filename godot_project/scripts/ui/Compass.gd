@@ -1,6 +1,8 @@
 extends CanvasLayer
 ## Compass — always-on orientation widget, bottom-right corner.
-## North = world -Z (bridge runs East-West along the X axis).
+## The Tacoma Narrows Bridge runs ENE–WSW (~15° north of due East).
+## Geographic North is therefore not exactly perpendicular to the bridge span.
+## GEOGRAPHIC_CORRECTION aligns the compass to real-world North.
 ## Reads the active Camera3D each frame so it works with any camera mode.
 
 # ── Layout ────────────────────────────────────────────────────────────────────
@@ -11,6 +13,13 @@ const LABEL_RADIUS:  float = 23.0   # distance from centre to cardinal letters
 const FONT_SIZE:     int   = 11
 const MARGIN:        int   = 12
 const FLOW_PANEL_H:  int   = 80     # DataFlowPanel height — stay above it
+
+# The real TNB runs NW-SE (~45° from true North). In the game scene the bridge
+# lies along the X-axis: +X = Gig Harbor/NW end (315°), -X = Tacoma/SE end (135°).
+# The scene's X-axis is mirrored from the standard East convention, so the raw
+# atan2 heading is offset by 225° (= 45° + 180°) to reach true compass bearings.
+# Result: facing +X (Gig Harbor) → 315° NW; facing -X (Tacoma) → 135° SE.
+const GEOGRAPHIC_CORRECTION: float = deg_to_rad(225.0)
 
 # ── Colors (matching project dark theme) ──────────────────────────────────────
 const COLOR_BG:         Color = Color(0.05, 0.05, 0.09, 0.88)
@@ -108,5 +117,6 @@ func _camera_yaw() -> float:
 		return 0.0
 	# Camera forward in world space = -basis.z (OpenGL convention).
 	var fwd := -cam.global_transform.basis.z
-	# atan2(east_component, north_component) — north is -Z, east is +X.
-	return atan2(fwd.x, -fwd.z)
+	# Raw heading: 0 = facing game -Z, +π/2 = facing game +X.
+	# Apply geographic correction so the displayed heading matches real-world North.
+	return atan2(fwd.x, -fwd.z) + GEOGRAPHIC_CORRECTION

@@ -1,0 +1,4 @@
+# Exclude third-party plugin native code from GitHub language stats.
+# HTerrain plugin contains a C++ GDNative extension for terrain LOD —
+# this project's own code is 100% GDScript.
+godot_project/addons/** linguist-vendored=true
