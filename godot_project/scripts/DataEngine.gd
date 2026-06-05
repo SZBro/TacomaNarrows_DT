@@ -1,7 +1,19 @@
 extends Node
-## DataEngine — simulation infrastructure for the Tacoma Narrows digital twin.
-## Autoload singleton: manages timing, section registry, scenario state, and tick dispatch.
-## All physics/math is delegated to BridgeDataModel.
+# =============================================================================
+# DataEngine.gd — Simulation Engine Singleton
+# Author: Skyler Z. Broussard | Course: TCSS 499 | Spring 2026
+# =============================================================================
+# What:  Autoload singleton that drives the digital twin simulation clock and
+#        distributes physics data to every registered bridge section each tick.
+# Role:  Central hub of the data pipeline. Owns play/pause state, scenario
+#        selection, tick rate, and the section registry. On each tick it calls
+#        SyncLayer to produce validated sensor data, then pushes per-section
+#        payloads to BridgeSection, SectionTower, and CableSystem nodes.
+# Deps:  SyncLayer (autoload), BridgeDataModel (owned by SyncLayer).
+#        Bridge components register themselves via register_section() on _ready.
+# Signals: tick_completed, sim_state_changed, scenario_changed,
+#          stress_overlay_changed, multiplier_changed.
+# =============================================================================
 
 # ── Section Health State ──────────────────────────────────────────────────────
 # Thresholds calibrated against raw BridgeDataModel output ranges:
@@ -26,6 +38,8 @@ const STATE_NAMES: Dictionary = {
 	SectionState.FAILURE:  "FAILURE",
 }
 
+# Returns the discrete structural health state for a data packet by comparing
+# wind speed, resonance, and torsion against calibrated severity thresholds.
 func state_for(data: Dictionary) -> SectionState:
 	var wind: float = data.get("wind_speed", 0.0)
 	var res:  float = absf(data.get("resonance", 0.0))
@@ -38,6 +52,8 @@ func state_for(data: Dictionary) -> SectionState:
 		return SectionState.WARNING
 	return SectionState.NORMAL
 
+# Converts a discrete SectionState to a normalized 0–1 float for
+# threshold-based shader or UI color mapping.
 func state_to_stress(state: SectionState) -> float:
 	match state:
 		SectionState.WARNING:  return 0.33
@@ -57,6 +73,8 @@ func stress_continuous(data: Dictionary) -> float:
 var stress_overlay_enabled: bool = false
 signal stress_overlay_changed(enabled: bool)
 
+# Enables or disables the stress-color shader overlay on all bridge sections
+# and broadcasts the change so every registered section can react.
 func set_stress_overlay(enabled: bool) -> void:
 	stress_overlay_enabled = enabled
 	stress_overlay_changed.emit(enabled)
@@ -112,11 +130,13 @@ signal sim_state_changed(new_state: SimState)
 signal scenario_changed(new_scenario: Scenario)
 
 # ── Lifecycle ─────────────────────────────────────────────────────────────────
+# Starts the engine in CALM mode and begins ticking immediately on scene load.
 func _ready() -> void:
 	set_process(true)
 	load_scenario(Scenario.CALM)
 	play()
 
+# Accumulates frame delta time and fires fixed-rate simulation ticks at tick_rate Hz.
 func _process(delta: float) -> void:
 	if sim_state != SimState.PLAYING:
 		return
@@ -127,20 +147,24 @@ func _process(delta: float) -> void:
 		_fire_tick()
 
 # ── Section Registry ──────────────────────────────────────────────────────────
+# Adds a bridge component to the tick dispatch list. Called from each component's _ready().
 func register_section(section: Node) -> void:
 	if not _sections.has(section):
 		_sections.append(section)
 
+# Removes a bridge component from the dispatch list when it exits the scene tree.
 func unregister_section(section: Node) -> void:
 	_sections.erase(section)
 
 # ── Playback Control ──────────────────────────────────────────────────────────
+# Resumes tick generation if currently paused.
 func play() -> void:
 	if sim_state == SimState.PLAYING:
 		return
 	sim_state = SimState.PLAYING
 	sim_state_changed.emit(sim_state)
 
+# Halts tick generation and clears the accumulator to prevent a burst on resume.
 func pause() -> void:
 	if sim_state == SimState.PAUSED:
 		return
@@ -148,9 +172,11 @@ func pause() -> void:
 	_tick_accum = 0.0
 	sim_state_changed.emit(sim_state)
 
+# Fires a single tick regardless of play/pause state (used for manual stepping).
 func step() -> void:
 	_fire_tick()
 
+# Stops playback and resets simulation time and tick counter to zero.
 func reset() -> void:
 	sim_state   = SimState.PAUSED
 	_sim_time   = 0.0
@@ -158,6 +184,7 @@ func reset() -> void:
 	_tick_accum = 0.0
 	sim_state_changed.emit(sim_state)
 
+# Toggles between playing and paused states.
 func toggle_play_pause() -> void:
 	if sim_state == SimState.PLAYING:
 		pause()
@@ -165,10 +192,12 @@ func toggle_play_pause() -> void:
 		play()
 
 # ── Scenario ──────────────────────────────────────────────────────────────────
+# Switches the active environmental scenario and notifies all listeners.
 func load_scenario(scenario: Scenario) -> void:
 	current_scenario = scenario
 	scenario_changed.emit(scenario)
 
+# Returns a human-readable display name for the given (or current) scenario.
 func get_scenario_name(scenario: Scenario = current_scenario) -> String:
 	match scenario:
 		Scenario.CALM:            return "Calm"
@@ -179,6 +208,8 @@ func get_scenario_name(scenario: Scenario = current_scenario) -> String:
 		_:                        return "Unknown"
 
 # ── Tick ──────────────────────────────────────────────────────────────────────
+# Core dispatch: advances sim time, generates a validated global data packet via
+# SyncLayer, then builds and delivers a per-section payload to every registered node.
 func _fire_tick() -> void:
 	_sim_time += 1.0 / tick_rate
 	_tick     += 1
@@ -196,6 +227,7 @@ func _fire_tick() -> void:
 	for i: int in range(_sections.size() - 1, -1, -1):
 		var section: Node = _sections[i]
 		if not is_instance_valid(section):
+			# Prune stale section references during reverse iteration to avoid index skew.
 			_sections.remove_at(i)
 			continue
 		var pos:      Vector3    = section.global_position if section is Node3D else Vector3.ZERO
@@ -221,17 +253,21 @@ func _fire_tick() -> void:
 var _multipliers: Dictionary = {}
 signal multiplier_changed(key: String, value: float)
 
+# Sets a per-channel scalar applied to that data key on every future tick.
 func set_multiplier(key: String, value: float) -> void:
 	_multipliers[key] = value
 	multiplier_changed.emit(key, value)
 
+# Removes a channel multiplier, returning that key to its unscaled (×1.0) value.
 func reset_multiplier(key: String) -> void:
 	_multipliers.erase(key)
 	multiplier_changed.emit(key, 1.0)
 
+# Returns the current multiplier for a channel (1.0 if none is set).
 func get_multiplier(key: String) -> float:
 	return _multipliers.get(key, 1.0)
 
+# Scales data channel values in-place for every active multiplier entry.
 func _apply_multipliers(data: Dictionary) -> void:
 	for key in _multipliers:
 		if data.has(key):

@@ -1,7 +1,18 @@
 extends Node
-## Synchronization Layer — sits between BridgeDataModel and DataEngine.
-## Owns the physics model, validates/buffers/tags every data packet,
-## and fires signals on anomalies before handing clean data to DataEngine.
+# =============================================================================
+# SyncLayer.gd — Data Validation, Buffering, and Anomaly Detection Layer
+# Author: Skyler Z. Broussard | Course: TCSS 499 | Spring 2026
+# =============================================================================
+# What:  Autoload that sits between BridgeDataModel (raw physics output) and
+#        DataEngine (tick dispatch). Every sensor packet is validated against
+#        declared physical bounds, buffered for UI history graphs, checked for
+#        sudden anomalous changes, and stamped with provenance metadata.
+# Role:  Quality-control pipeline ensuring downstream consumers (bridge section
+#        scripts, stream panels, debug overlay) receive clean, bounded, traceable
+#        data. Maintains a 60-tick rolling history per section for graph rendering.
+# Deps:  BridgeDataModel (instantiated internally as _model).
+# Signals: anomaly_detected(section_id, stream_name, value, previous_value).
+# =============================================================================
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 const BUFFER_SIZE:              int    = 60      # ticks of history kept per section
@@ -55,6 +66,7 @@ var _last_spatial: Dictionary = {}  # section_id  -> { stream_name -> float }
 var _anomaly_log:  Array = []
 
 # ── Public API ────────────────────────────────────────────────────────────────
+# Returns the underlying BridgeDataModel instance (used by UI for direct queries).
 func get_model() -> BridgeDataModel:
 	return _model
 
@@ -66,6 +78,7 @@ func get_buffer(section_id: String) -> Array:
 func get_anomaly_log() -> Array:
 	return _anomaly_log.duplicate()
 
+# Clears the in-memory anomaly event log.
 func clear_anomaly_log() -> void:
 	_anomaly_log.clear()
 
@@ -83,6 +96,9 @@ func get_latest_spatial(section_id: String) -> Dictionary:
 	return buf.back().duplicate() if not buf.is_empty() else {}
 
 # ── Component 1 + 4: Global Ingestion + Tagging ───────────────────────────────
+# Generates a global sensor packet from BridgeDataModel, validates it against
+# GLOBAL_RANGES, detects anomalies, updates the last-good baseline, and stamps
+# provenance metadata before returning the clean packet to DataEngine.
 func process_global(
 		params:   Dictionary,
 		sim_time: float,
@@ -96,6 +112,9 @@ func process_global(
 	return _tag_provenance(validated, tick, sim_time)
 
 # ── Component 1 + 2 + 3 + 4: Spatial Ingestion + Buffer + Anomaly + Tagging ──
+# Generates per-section sensor data (traffic load, resonance, torsion) from
+# BridgeDataModel, validates it, detects anomalies, pushes into the rolling
+# buffer, and returns a provenance-tagged packet to DataEngine.
 func process_spatial(
 		section_id:  String,
 		world_pos:   Vector3,
@@ -124,6 +143,9 @@ func process_spatial(
 	return _tag_provenance(validated, tick, sim_time)
 
 # ── Component 1: Validation ───────────────────────────────────────────────────
+# Clamps each key in raw against its declared physical range. Substitutes the
+# last known good value for any null or missing keys so downstream code always
+# receives floats within safe bounds.
 func _validate(
 		raw:       Dictionary,
 		ranges:    Dictionary,
@@ -146,6 +168,8 @@ func _validate(
 	return out
 
 # ── Component 3: Anomaly Detection ───────────────────────────────────────────
+# Flags any data channel whose single-tick relative change exceeds
+# ANOMALY_CHANGE_THRESHOLD (20%). Emits anomaly_detected and appends to the log.
 func _check_anomalies(
 		section_id: String,
 		current:    Dictionary,
@@ -158,6 +182,7 @@ func _check_anomalies(
 			continue  # no baseline yet on first tick
 		var cur:   float = float(current[key])
 		var prev:  float = float(previous[key])
+		# Use max(|prev|, floor) as denominator to avoid division near zero.
 		var denom: float = maxf(absf(prev), ANOMALY_MIN_MAGNITUDE)
 		if absf(cur - prev) / denom > ANOMALY_CHANGE_THRESHOLD:
 			var event: Dictionary = {
@@ -170,6 +195,8 @@ func _check_anomalies(
 			anomaly_detected.emit(section_id, key, cur, prev)
 
 # ── Component 2: Temporal Buffer ──────────────────────────────────────────────
+# Appends the validated snapshot to the section's rolling history and trims
+# the oldest entry once the buffer exceeds BUFFER_SIZE ticks.
 func _update_buffer(section_id: String, data: Dictionary) -> void:
 	if not _buffer.has(section_id):
 		_buffer[section_id] = []
@@ -179,6 +206,8 @@ func _update_buffer(section_id: String, data: Dictionary) -> void:
 		buf.pop_front()
 
 # ── Component 4: Provenance Tagging ──────────────────────────────────────────
+# Stamps simulation_tick, simulation_time, and source onto each outgoing packet
+# so consumers can trace exactly when and where every data point was produced.
 func _tag_provenance(data: Dictionary, tick: int, sim_time: float) -> Dictionary:
 	var out: Dictionary = data.duplicate()
 	out["simulation_tick"] = tick
