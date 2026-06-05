@@ -1,5 +1,17 @@
 @tool
 extends Node3D
+# =============================================================================
+# BridgeSection.gd — Procedural Bridge Deck / Truss Segment
+# Author: Skyler Z. Broussard | Course: TCSS 499 | Spring 2026
+# =============================================================================
+# What:  Procedurally generates one modular roadway-and-truss segment of the
+#        bridge using CSG geometry. Animates vertical resonance and deck torsion
+#        in response to per-tick sensor data from DataEngine.
+# Role:  The repeating structural unit shared by both the 1940 and 1950 bridge
+#        models. Registers with DataEngine on _ready so it receives data each
+#        tick. Applies a stress-color shader (next_pass) to all CSG materials.
+# Deps:  DataEngine (autoload), stress_overlay.gdshader, selection_outline.gdshader.
+# =============================================================================
 
 # ── Configuration ──────────────────────────────────────────
 @export var deck_length: float = 106.6
