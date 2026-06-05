@@ -102,18 +102,6 @@ scripted approximations rather than solutions to structural engineering equation
 
 ---
 
-## References
-
-See full reference list: [Google Doc QR link or URL]
-
-Key sources:
-- Attaran, M., & Celik, B. G. (2023). Digital twin: Benefits, use cases, 
-  challenges, and opportunities. Decision Analytics Journal.
-- Godot Engine Contributors. (2024). Godot Engine (Version 4.6).
-- Zylann. (2024). HTerrain plugin for Godot. GitHub.
-
----
-
 ## Acknowledgements
 
 Faculty Supervisor: Dr. Wei Cai, University of Washington Tacoma  
